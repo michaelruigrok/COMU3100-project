@@ -1,3 +1,4 @@
-.st1:hover { fill: #1Bae00;}
-.st2:hover { fill: #e01b37;}
-.st3:hover { fill: #07833c;}
+svg, object, img {
+	max-width: 100vw;
+	max-height: 300vh;
+}

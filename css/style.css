@@ -1,3 +1,4 @@
+/* Resets */
 * { 
 	 display: border-box;
 }
@@ -6,6 +7,8 @@ body {
 	width: 100%;
 	margin: 0px;
 }
+
+/* general */
 
 .background-video {
 	position: absolute;
@@ -24,17 +27,17 @@ svg, object, img {
 }
 
 /* Quiz */
-form {
+form.quiz {
 	height: 90vh;
 	display: flex;
 	color: white;
 }
 
-form[name="books"] {
+form.quiz[name="books"] {
 	background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;
 }
 
-form > fieldset {
+form.quiz > fieldset {
 	width: 60vw;
 	height: 60vh;
 	margin: auto;

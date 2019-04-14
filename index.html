@@ -10,6 +10,34 @@
 		<link rel='stylesheet' type='text/css' href='css/style.css'/>
 	</head>
 	<body>
+		<form name="commute-time" class="number-commute-time" action="action">
+			<video class="commute-time-back" loop autoplay muted>
+				<source src="media/bus-stop-traffic.mp4" type="video/mp4" />
+			</video>
+			<fieldset>
+				<legend>How long does it take to get to work each day?</legend>
+				<p>
+					<input id="commute-time_1" type="radio" name="commute-time">
+					<label for="commute-time_1">Less than 15 minutes</label>
+				</p>
+				<p>
+					<input id="commute-time_2" type="radio" name="commute-time">
+					<label for="commute-time_2">15-30 minutes</label>
+				</p>
+				<p>
+					<input id="commute-time_3" type="radio" name="commute-time">
+					<label for="commute-time_3">30 minutes to an hour</label>
+				</p>
+				<p>
+					<input id="commute-time_4" type="radio" name="commute-time">
+					<label for="commute-time_4">1-2 hours</label>
+				</p>
+				<p>
+					<input id="commute-time_4" type="radio" name="commute-time">
+					<label for="commute-time_4">2+ hours</label>
+				</p>
+			</fieldset>
+		</form>
 		<form name="books" class="number-books" action="action">
 			<fieldset>
 				<legend>How many books do you read each month?</legend>

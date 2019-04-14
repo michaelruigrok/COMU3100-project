@@ -15,6 +15,7 @@ svg, object, img {
 form {
 	height: 90vh;
 	display: flex;
+	color: white;
 }
 
 form[name="books"] {
@@ -25,13 +26,15 @@ form[name="commute-time"] {
 	background: url('../media/bus-stop-traffic.mp4') no-repeat center center;
 }
 
-.commute-time-back {
+.background-video {
 	position: absolute;
+	min-width: 100%;
 	max-width: 100vmax;
-	max-height: 100vmax;
-	min-width: 100vw;
-	min-height: 100vh;
+	min-height: 100%;
 	z-index: -1;
+	overflow: hidden;
+	object-fit: cover;
+	filter: brightness(70%);
 }
 
 form > fieldset {

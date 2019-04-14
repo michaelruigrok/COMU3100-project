@@ -54,12 +54,14 @@
 </style>
 <title
    id="title9941">Electorate Map of Greater Brisbane</title>
+<!--
 <path
    class="border"
    d="M 2,-53.5 H 744 V 1282.6 H 2 Z"
    id="path9943"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#231f20;stroke-width:4;stroke-miterlimit:10" />
+   -->
 <path
    d="m 1.3,742 v 13.2 C 2,750.9 2.7,746.6 3,742.3 Z"
    id="path9945"

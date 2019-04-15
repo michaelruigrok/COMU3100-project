@@ -9,6 +9,9 @@ body {
 }
 
 /* general */
+section {
+	background: none;
+}
 
 .background-video {
 	position: absolute;
@@ -28,9 +31,18 @@ svg, object, img {
 
 /* Quiz */
 form.quiz {
+	background: none;
 	height: 90vh;
 	display: flex;
 	color: white;
+}
+
+form.quiz * {
+	color: white;
+}
+
+form.quiz label {
+	font-weight: normal;
 }
 
 form.quiz[name="books"] {
@@ -41,4 +53,9 @@ form.quiz > fieldset {
 	width: 60vw;
 	height: 60vh;
 	margin: auto;
+}
+
+#maps {
+	background: white;
+	padding-top: 15vh;
 }

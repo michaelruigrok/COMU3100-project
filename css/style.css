@@ -13,8 +13,8 @@ section {
 	background: none;
 }
 
-.hidden {
-	visibility: hidden;
+.hidden, .hidden * {
+	opacity: 0;
 }
 
 .background-video {
@@ -39,6 +39,10 @@ form.quiz {
 	height: 90vh;
 	display: flex;
 	color: white;
+}
+
+.quiz + * {
+	background: white;
 }
 
 form.quiz * {

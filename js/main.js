@@ -1,6 +1,5 @@
 function showHidden(query) {
 	document.querySelectorAll(query).forEach(function(e) {
-		e.classList.remove("hidden");
 		e.classList.add("fadeInRight", "animated");
 	});
 }

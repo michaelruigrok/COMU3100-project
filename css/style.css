@@ -13,6 +13,10 @@ section {
 	background: none;
 }
 
+.hidden {
+	display: none;
+}
+
 .background-video {
 	position: absolute;
 	min-width: 100%;

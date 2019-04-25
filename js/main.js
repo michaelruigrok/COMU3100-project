@@ -1,5 +1,8 @@
 function showHidden(query) {
-	document.querySelectorAll(query).forEach(e => e.classList.remove("hidden"));
+	document.querySelectorAll(query).forEach(function(e) {
+		e.classList.remove("hidden");
+		e.classList.add("fadeInRight", "animated");
+	});
 }
 
 function addQListener(qName) {

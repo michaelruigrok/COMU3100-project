@@ -3,10 +3,24 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>COMU3100 Project</title>
+		<!-- jQuery, for easy access to DOM + other helper functions -->
 		<script type="text/javascript"
 			src="https://code.jquery.com/jquery-3.2.1.min.js"
 			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			crossorigin="anonymous"></script>
+		<!-- wow.js, for animations that appear when scrolling -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+			integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U="
+			crossorigin="anonymous"></script>
+		<script>
+			new WOW().init();
+		</script>
+		<!-- animate.css, used by wow.js -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+			integrity="sha256-HtCCUh9Hkh//8U1OwcbD8epVEUdBvuI8wj1KtqMhNkI="
+			crossorigin="anonymous"/>
+		<!-- Our css (find our js at bottom of body) -->
 		<link rel='stylesheet' type='text/css' href='css/style.css'/>
 	</head>
 	<body>
@@ -39,7 +53,7 @@
 				</p>
 			</fieldset>
 		</form>
-		<p id="commute-time_feedback" class="wow fadInLeft animated hidden">
+		<p id="commute-time_feedback" class="hidden">
 			The distance in which people travel is tied closely to house prices. Depending on house prices, you may be travelling further than somebody better off than you.
 		</p>
 
@@ -64,7 +78,7 @@
 				</p>
 			</fieldset>
 		</form>
-		<object data="img/Greater-Brisbane-Metro-Composite.svg" type="image/svg+xml"/></object>
+		<object class="wow fadeIn" data="img/Greater-Brisbane-Metro-Composite.svg" type="image/svg+xml"/></object>
 
 		<script type="text/javascript"
 			src="js/main.js"

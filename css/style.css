@@ -14,7 +14,7 @@ section {
 }
 
 .hidden {
-	display: none;
+	visibility: hidden;
 }
 
 .background-video {

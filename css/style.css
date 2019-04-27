@@ -59,6 +59,10 @@ form.quiz label {
 	font-weight: normal;
 }
 
+.quiz-container.commute-time > video {
+	object-position: 77% 80%;
+}
+
 .quiz-container.number-books {
 	background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;
 }

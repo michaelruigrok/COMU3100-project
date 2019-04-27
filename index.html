@@ -24,62 +24,61 @@
 		<link rel='stylesheet' type='text/css' href='css/style.css'/>
 	</head>
 	<body>
-		<form name="commute-time" class="quiz number-commute-time" action="action">
+		<div class="quiz-container">
 			<video class="background-video" loop autoplay muted>
 				<source src="media/bus-stop-traffic.webm" type="video/webm"/>
-				<source src="media/bus-stop-traffic.mp4" type="video/mp4"/>
+					<source src="media/bus-stop-traffic.mp4" type="video/mp4"/>
 			</video>
-			<fieldset>
-				<legend>How long does it take to get to work each day?</legend>
-				<p>
-					<input id="commute-time_1" type="radio" name="commute-time">
-					<label for="commute-time_1">Less than 15 minutes</label>
-				</p>
-				<p>
-					<input id="commute-time_2" type="radio" name="commute-time">
-					<label for="commute-time_2">15-30 minutes</label>
-				</p>
-				<p>
-					<input id="commute-time_3" type="radio" name="commute-time">
-					<label for="commute-time_3">30 minutes to an hour</label>
-				</p>
-				<p>
-					<input id="commute-time_4" type="radio" name="commute-time">
-					<label for="commute-time_4">1-2 hours</label>
-				</p>
-				<p>
-					<input id="commute-time_5" type="radio" name="commute-time">
-					<label for="commute-time_5">2+ hours</label>
-				</p>
-			</fieldset>
-		</form>
-		<div> 
-			<p id="commute-time_feedback" class="hidden">
-				The distance in which people travel is tied closely to house prices. Depending on house prices, you may be travelling further than somebody better off than you.
-			</p>
+			<form name="commute-time" class="quiz number-commute-time" action="action">
+				<fieldset>
+					<legend>How long does it take to get to work each day?</legend>
+					<p>
+						<input id="commute-time_1" type="radio" name="commute-time">
+						<label for="commute-time_1">Less than 15 minutes</label>
+					</p>
+					<p>
+						<input id="commute-time_2" type="radio" name="commute-time">
+						<label for="commute-time_2">15-30 minutes</label>
+					</p>
+					<p>
+						<input id="commute-time_3" type="radio" name="commute-time">
+						<label for="commute-time_3">30 minutes to an hour</label>
+					</p>
+					<p>
+						<input id="commute-time_4" type="radio" name="commute-time">
+						<label for="commute-time_4">1-2 hours</label>
+					</p>
+					<p>
+						<input id="commute-time_5" type="radio" name="commute-time">
+						<label for="commute-time_5">2+ hours</label>
+					</p>
+				</fieldset>
+			</form>
 		</div>
-
-		<form name="books" class="quiz number-books" action="action">
-			<fieldset>
-				<legend>How many books do you read each month?</legend>
-				<p>
-					<input id="books_1" type="radio" name="books">
-					<label for="books_1">Never</label>
-				</p>
-				<p>
-					<input id="books_2" type="radio" name="books">
-					<label for="books_2">1-3</label>
-				</p>
-				<p>
-					<input id="books_3" type="radio" name="books">
-					<label for="books_3">4-7</label>
-				</p>
-				<p>
-					<input id="books_4" type="radio" name="books">
-					<label for="books_4">8+</label>
-				</p>
-			</fieldset>
-		</form>
+		<p> This is texually detailed information about the hours of time that work completes a particular action!</p>
+		<div class="quiz-container number-books">
+			<form name="books" class="quiz number-books" action="action">
+				<fieldset>
+					<legend>How many books do you read each month?</legend>
+					<p>
+						<input id="books_1" type="radio" name="books">
+						<label for="books_1">Never</label>
+					</p>
+					<p>
+						<input id="books_2" type="radio" name="books">
+						<label for="books_2">1-3</label>
+					</p>
+					<p>
+						<input id="books_3" type="radio" name="books">
+						<label for="books_3">4-7</label>
+					</p>
+					<p>
+						<input id="books_4" type="radio" name="books">
+						<label for="books_4">8+</label>
+					</p>
+				</fieldset>
+			</form>
+		</div>
 		<object class="wow fadeIn" data="img/Greater-Brisbane-Metro-Composite.svg" type="image/svg+xml"/></object>
 
 		<script type="text/javascript"

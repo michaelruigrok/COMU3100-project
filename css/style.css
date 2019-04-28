@@ -1,9 +1,9 @@
 /* Resets */
-* { 
+* {
 	 display: border-box;
 }
 
-body { 
+body {
 	width: 100%;
 	margin: 0px;
 }
@@ -68,4 +68,83 @@ form.quiz label {
 
 .quiz-container.number-books {
 	background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;
+}
+
+form.three-class div.class-options {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+@media screen and (max-width: 666px) {
+	form.three-class div.class-options {
+		flex-direction: column;
+	}
+}
+
+form.three-class p {
+	border-radius: 1em;
+	border: 0.1em solid black;
+	margin: 2vmin 10vmin;
+	padding: 1rem;
+	flex-grow: 1;
+	color: black;
+	background: #ddd;
+}
+
+form.three-class p.working-class:hover {
+	background: #e4e4e4;
+}
+
+form.three-class p.middle-class:hover {
+	background-image: linear-gradient(to bottom, white, #e4e4e4);
+}
+
+form.three-class p.upper-class:hover {
+	background-image: linear-gradient(to bottom, #FDE08D, #DF9F28);
+	/* from http://cssdeck.com/labs/mfqb3utw */
+}
+
+/*
+ * SHINY CSS BUTTON EFFECT
+ */
+.glint:after {
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(-30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+.glint {
+  position: relative;
+  overflow: hidden;
+}
+
+.glint:hover:after {
+  opacity: 1;
+  top: -30%;
+  left: -30%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+
+.glint:active:after {
+  opacity: 0;
 }

@@ -112,11 +112,17 @@ form.three-class div.class-options {
 form.three-class p {
 	border-radius: 1em;
 	border: 0.1em solid black;
-	margin: 2vmin 10vmin;
+	margin: 2vmin 1vw;
 	padding: 1rem;
 	flex-grow: 1;
 	color: black;
 	background: #ddd;
+}
+
+div.three-class {
+	margin: auto;
+	margin-top: 3rem;
+	width: 80%;
 }
 
 form.three-class p.working-class:hover {

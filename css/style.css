@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Eczar|Noto+Serif');
+
 /* Resets */
 * {
 	 display: border-box;
@@ -11,9 +13,17 @@ body {
 /* Text, font */
 h1 {
   font-size: 3.5em;
+  font-family: "Eczar", serif;
+  font-weight: normal;
 }
 
-/* general */
+/* animations */
+.slow {
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+}
+
+/* general layout */
 section {
 	background: none;
 }

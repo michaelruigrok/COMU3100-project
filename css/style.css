@@ -8,6 +8,11 @@ body {
 	margin: 0px;
 }
 
+/* Text, font */
+h1 {
+  font-size: 3.5em;
+}
+
 /* general */
 section {
 	background: none;
@@ -37,7 +42,14 @@ svg, object, img {
 	max-height: 300vh;
 }
 
+.hero, .quiz-container, #intro {
+	position: relative;
+	background: none;
+	min-height: 90vh;
+}
+
 /* Quiz */
+
 .quiz-container {
 	position: relative;
 	background: none;
@@ -76,7 +88,7 @@ form.three-class div.class-options {
 	width: 100%;
 }
 
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 800px) {
 	form.three-class div.class-options {
 		flex-direction: column;
 	}

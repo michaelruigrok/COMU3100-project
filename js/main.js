@@ -1,6 +1,6 @@
 function showHidden(query) {
 	document.querySelectorAll(query).forEach(function(e) {
-		e.classList.add("fadeInRight", "animated");
+		e.classList.add("fadeIn", "animated");
 	});
 }
 
@@ -9,6 +9,17 @@ function addQListener(qName) {
 		.forEach(e => e.addEventListener("click",
 			e => showHidden("#" + qName + "_feedback")));
 }
+
+document.querySelectorAll("form.three-class p")
+	.forEach(e => e.addEventListener("click", function(e) {
+		var input = e.target.querySelector("input");
+		if (input) {
+			input.checked = true;
+			input.focus();
+		}
+
+		showHidden("#three-class_feedback");
+	}));
 
 addQListener("commute-time");
 addQListener("books");

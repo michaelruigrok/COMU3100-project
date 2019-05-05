@@ -93,6 +93,25 @@ form.quiz label {
 	object-position: 77% 62%;
 }
 
+.commute-time-map {
+  background-image: url('../img/brisbane-commute-map.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.commute-map-legend {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 15px;
+}
+
+.commute-map-copyright {
+  margin: 0;
+  padding: 2px;
+  background-color: #fab;
+}
+
 .quiz-container.number-books {
 	background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;
 }

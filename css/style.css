@@ -107,7 +107,7 @@ form.quiz label {
 }
 
 .quiz-container.employment-type label, .quiz-container.employment-type legend{
-	padding: 0.5rem;
+	padding: 0.4rem;
 	background: rgba(0, 0, 0, 1);
 }
 
@@ -126,6 +126,7 @@ form.quiz label {
 
 .commute-map-copyright {
   margin: 0;
+  width: auto;
   padding: 2px;
   background-color: #fab;
 }

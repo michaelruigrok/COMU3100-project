@@ -23,4 +23,5 @@ document.querySelectorAll("form.three-class p")
 	}));
 
 addQListener("commute-time");
+addQListener("employment-type");
 addQListener("books");

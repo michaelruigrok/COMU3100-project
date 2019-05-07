@@ -73,6 +73,10 @@ svg, object, img {
 	min-height: 90vh;
 }
 
+.space {
+	margin-bottom: 10vh;
+}
+
 /* Quiz */
 
 .quiz-container {
@@ -130,6 +134,10 @@ section.geography div {
 
 section.geography fieldset {
 	border: none;
+}
+
+#suburb-wealth-results {
+	border-spacing: 2em 0.5em;
 }
 
 .quiz-container.employment-type label, .quiz-container.employment-type legend{

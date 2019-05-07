@@ -2,7 +2,7 @@
 
 /* Resets */
 * {
-	 display: border-box;
+	 box-sizing: border-box;
 }
 
 body {
@@ -15,11 +15,19 @@ h1 {
   font-size: 3.5em;
   font-family: "Eczar", serif;
   font-weight: normal;
+  margin-top: 0px;
 }
 
 h1 > span {
   padding-bottom: 0.4rem;
   border-bottom: solid 3px #BE4343;
+}
+
+p {
+	width: 80%;
+	line-height: 1.8rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* animations */
@@ -93,6 +101,16 @@ form.quiz label {
 	object-position: 77% 62%;
 }
 
+.quiz-container.employment-type {
+	color: white;
+	text-shadow: black 1px 0 5px;
+}
+
+.quiz-container.employment-type label, .quiz-container.employment-type legend{
+	padding: 0.5rem;
+	background: rgba(0, 0, 0, 1);
+}
+
 .commute-time-map {
   background-image: url('../img/brisbane-commute-map.png');
   background-position: center;
@@ -125,6 +143,11 @@ form.three-class div.class-options {
 @media screen and (max-width: 800px) {
 	form.three-class div.class-options {
 		flex-direction: column;
+	}
+
+	p {
+		width: 90%;
+		margin: auto;
 	}
 }
 

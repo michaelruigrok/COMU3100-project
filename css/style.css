@@ -106,6 +106,24 @@ form.quiz label {
 	text-shadow: black 1px 0 5px;
 }
 
+section.geography {
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/BrisbaneRiver02_gobeirne-edit1.jpg/1280px-BrisbaneRiver02_gobeirne-edit1.jpg');
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+}
+
+section.geography > div {
+	height: 100%;
+	margin: auto;
+}
+
+section.geography div {
+	width: 43%;
+	background: rgba(255, 255, 255, 0.4);
+}
+
 .quiz-container.employment-type label, .quiz-container.employment-type legend{
 	padding: 0.4rem;
 	background: rgba(0, 0, 0, 1);
@@ -132,7 +150,8 @@ form.quiz label {
 }
 
 .quiz-container.number-books {
-	background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;
+	background-color: black;
+	/*background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;*/
 }
 
 form.three-class div.class-options {

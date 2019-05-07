@@ -7,7 +7,7 @@ function showHidden(query) {
 function addQListener(qName) {
 	document.querySelectorAll("input[name='" + qName + "']")
 		.forEach(e => e.addEventListener("click",
-			e => showHidden("#" + qName + "_feedback")));
+			() => showHidden("#" + qName + "_feedback")));
 }
 
 document.querySelectorAll("form.three-class p")

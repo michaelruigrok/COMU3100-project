@@ -9,6 +9,14 @@
 			src="https://code.jquery.com/jquery-3.2.1.min.js"
 			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			crossorigin="anonymous"></script>
+
+		<!-- D3, for data manipulation -->
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<!-- Google Charts, for chart visualisations -->
+		<script type="text/javascript"
+			src="https://www.gstatic.com/charts/loader.js"
+			></script>
+
 		<!-- wow.js, for animations that appear when scrolling -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
 			integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U="
@@ -21,9 +29,10 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
 			integrity="sha256-HtCCUh9Hkh//8U1OwcbD8epVEUdBvuI8wj1KtqMhNkI="
 			crossorigin="anonymous"/>
+
 		<!-- Our css (find our js at bottom of body) -->
 		<link rel='stylesheet' type='text/css' href='css/style.css'/>
-		<script type="text/javascript" src="js/chart.js" defer="defer"></script> 
+		<script type="text/javascript" src="js/charts.js" defer="defer"></script> 
 	</head>
 	<body>
 		<header class="intro text-center section-padding" id="intro">
@@ -57,9 +66,31 @@
 			</div>
 
 			<p id="three-class_feedback" class="hidden">
-				There's a lot more to what define's class than jobs or money. It might make you think very differently.
+				There's a lot more to what defines class than jobs or money. It might make you think very differently.
 			</p>
 		</header>
+
+		<section>
+		<form name="suburb-wealth" id="suburb-wealth" disabled="disabled">
+			<fieldset>
+				<p>
+					<label for="suburb-wealth_1">Suburb</label>
+					<input id="suburb-wealth_1" type="text" name="suburb-wealth">
+				</p>
+				<button type="submit">Go</button>
+			</fieldset>
+		</form>
+		<table id="suburb-wealth-results">
+			<thead>
+				<tr>
+					<th>Suburb</th>
+					<th>Average Person's Wealth</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		</section>
 
 
 		<div class="quiz-container commute-time">

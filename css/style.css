@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Eczar|Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Eczar|Noto+Sans');
 
 /* Resets */
 * {
@@ -25,9 +25,11 @@ h1 > span {
 
 p {
 	width: 80%;
-	line-height: 1.8rem;
+	line-height: 1.8em;
 	margin-left: auto;
 	margin-right: auto;
+	font-weight: 600;
+	font-family: "Noto Sans", serif;
 }
 
 /* animations */
@@ -65,7 +67,7 @@ svg, object, img {
 	max-height: 300vh;
 }
 
-.hero, .quiz-container, #intro {
+.hero, .quiz-container, #intro, section {
 	position: relative;
 	background: none;
 	min-height: 90vh;
@@ -121,7 +123,13 @@ section.geography > div {
 
 section.geography div {
 	width: 43%;
-	background: rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 20px;
+	padding: 1em;
+}
+
+section.geography fieldset {
+	border: none;
 }
 
 .quiz-container.employment-type label, .quiz-container.employment-type legend{

@@ -57,7 +57,24 @@ d3.csv("/data/seifa-qld-2016.csv").then(function(data) {
 	document.querySelector("#suburb-wealth").addEventListener(
 		"submit", function(e) {
 			e.preventDefault(); // ensure page does not send data
-			e.target.disabled = false;
+
+			d3.csv("/data/suburbs.csv").then(function(allSubs) {
+				console.log("YAY!");
+				console.log(allSubs);
+				var list = {};
+				allSubs.map(s => s.Suburb).forEach(function (s) {
+					var suburbs = data.filter(x => x["Name"].toUpperCase().includes(s.toUpperCase()));
+					if (suburbs.length === 0) {
+						list[s] = [];
+						console.log(s);
+						console.log("No suburbs :(");
+					} else {
+						// suburbs.forEach(x => 
+						// 	console.log(x.Name))
+					}
+				});
+				console.log(list);
+			});
 
 			var input = document.querySelector("#suburb-wealth input");
 			if (input.value.length < 3) return false;

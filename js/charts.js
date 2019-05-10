@@ -138,7 +138,7 @@ var SuburbWealth = (function() {
 		return suburbs.filter(x => x["Name"].toLowerCase().includes(match.toLowerCase()));
 	}
 
-	d3.csv("https://michaelruigrok.github.io/COMU3100-project/data/seifa-qld-2016.csv").then(function(data) {
+	d3.csv("data/seifa-qld-2016.csv").then(function(data) {
 
 		document.querySelector("#suburb-wealth fieldset").disabled = false;
 		document.querySelector("#suburb-wealth").onsubmit = function(e) {

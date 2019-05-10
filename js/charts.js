@@ -119,16 +119,10 @@ var SuburbWealth = (function() {
 			.toLowerCase()
 			.split(regex)
 			.filter(s => s != "");
-		console.log(terms);
-		console.log(missingSuburbs);
 
 		// Check if suburb in missing list
 		for (key in missingSuburbs) {
-			if (match === key) {
-				console.log("YEET");
-				console.log(key);
-				console.log(match);
-				console.log(missingSuburbs[key]);
+			if (match.toLowerCase() === key.toLowerCase()) {
 				missingSuburbs[key].forEach(x =>
 					results = results.concat(getMatchingSuburbs(suburbs, x))
 				);

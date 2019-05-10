@@ -179,6 +179,10 @@ section.geography fieldset {
 	border-spacing: 2em 0.5em;
 }
 
+#unemployment_chart {
+	min-width: 40%;
+}
+
 .quiz-container.employment-type label, .quiz-container.employment-type legend{
 	padding: 0.4rem;
 	background: rgba(0, 0, 0, 1);

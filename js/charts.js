@@ -14,9 +14,12 @@ function underemployment() {
 	var options = {
 		title: 'Unemployment vs Underemployment',
 		vAxis: {
-			title: 'Rating (scale of 1-10)',
+			title: 'Percent of Australians',
 			maxValue: 30,
 			minValue: 0,
+		},
+		legend: {
+			position: 'none'
 		}
 	};
 

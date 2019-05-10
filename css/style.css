@@ -80,6 +80,36 @@ svg, object, img {
 	margin-bottom: 10vh;
 }
 
+
+.sidebyside {
+	display: flex;
+	width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+	.sidebyside {
+		flex-direction: column;
+	}
+
+	.sidebyside p {
+		margin: auto;
+	}
+	.sidebyside p {
+		width: 90%;
+		margin: auto;
+	}
+}
+@media screen and (max-width: 800px) {
+	form.three-class div.class-options {
+		flex-direction: column;
+	}
+
+	p {
+		width: 90%;
+		margin: auto;
+	}
+}
+
 /* Quiz */
 
 .quiz-container {

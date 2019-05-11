@@ -12,6 +12,10 @@ body {
 }
 
 /* Text, font */
+* {
+	font-family: "Noto Sans", sans-serif;
+}
+
 h1 {
   font-size: 3.5em;
   font-family: "Eczar", serif;
@@ -29,7 +33,6 @@ p {
 	line-height: 1.8em;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: "Noto Sans", serif;
 }
 
 /* animations */
@@ -124,7 +127,8 @@ svg, object {
 	min-height: 90vh;
 	display: flex;
 	color: white;
-	text-shadow: black 1px 0 5px;
+	text-shadow: black 0 0 2px;
+	font-size: 1.1em;
 }
 
 form.quiz {
@@ -146,11 +150,6 @@ form.quiz label {
 
 .quiz-container.employment-type img {
 	object-position: 25%;
-}
-
-.quiz-container.employment-type {
-	color: white;
-	text-shadow: black 1px 0 5px;
 }
 
 section.geography {
@@ -189,7 +188,7 @@ section.geography fieldset {
 	margin: 0;
 }
 
-.quiz-container.employment-type label, .quiz-container.employment-type legend{
+.quiz-container.employment-type label, .quiz-container.employment-type legend {
 	padding: 0.4rem;
 	background: rgba(22, 116, 216, 0.9);
 
@@ -322,7 +321,7 @@ form.three-class p:hover {
 
 form.three-class p.working-class:hover {
 	background: #ccc;
-	text-shadow: white 1px 0 4px;
+	text-shadow: white 0 0 4px;
 }
 
 form.three-class p.middle-class:hover {

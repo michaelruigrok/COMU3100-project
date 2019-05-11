@@ -117,7 +117,8 @@
 		</div>
 		</section>
 
-		<section id="employment-type_feedback" class="hidden sidebyside">
+		<div id="employment-type_feedback" class="hidden">
+		<section class="sidebyside">
 			<div>
 				<p>In the case of part time jobs, contract work, and self-employment, the amount of work you can complete varies wildly. And putting extra effort into getting enough hours of work in each week means extra stress.</p>
 				<p>This is called 'underemployment', it's a big issue that isn't talked about. The number of people who are underemployed is almost as large as those who are unemployed.
@@ -168,7 +169,6 @@
 			</div>
 		</section>
 
-
 		<div class="quiz-container commute-time">
 			<div class="background-video">
 				<video loop autoplay muted>
@@ -202,6 +202,7 @@
 				</fieldset>
 			</form>
 		</div>
+		</div>
 		<section id="commute-time_feedback" class="hidden">
 			<div class="hero commute-time-map">
 				<div>
@@ -215,28 +216,42 @@
 		</section>
 
 
-		<div class="quiz-container number-books">
-			<form name="books" class="quiz number-books" action="action">
+		<div class="quiz-container shopping-centres">
+			<div class="background-video">
+				<video loop autoplay muted>
+					<source src="media/shopping-carpark-low.webm" type="video/webm"/>
+					<source src="media/shopping-carpark-low.mp4" type="video/mp4"/>
+				</video>
+			</div>
+			<form name="shopping-centres" class="quiz shopping-centres" action="action">
 				<fieldset>
-					<legend>How many books do you read each month?</legend>
+					<legend>How many shopping centres are available in a 10 minute drive?</legend>
 					<p>
-						<input id="books_1" type="radio" name="books">
-						<label for="books_1">Never</label>
+						<input id="shopping-centres_1" type="radio" name="shopping-centres">
+						<label for="shopping-centres_1">None</label>
 					</p>
 					<p>
-						<input id="books_2" type="radio" name="books">
-						<label for="books_2">1-3</label>
+						<input id="shopping-centres_2" type="radio" name="shopping-centres">
+						<label for="shopping-centres_2">1-3</label>
 					</p>
 					<p>
-						<input id="books_3" type="radio" name="books">
-						<label for="books_3">4-7</label>
+						<input id="shopping-centres_3" type="radio" name="shopping-centres">
+						<label for="shopping-centres_3">4-10</label>
 					</p>
 					<p>
-						<input id="books_4" type="radio" name="books">
-						<label for="books_4">8+</label>
+						<input id="shopping-centres_4" type="radio" name="shopping-centres">
+						<label for="shopping-centres_4">10+</label>
 					</p>
 				</fieldset>
 			</form>
+		</div>
+
+		<div id="shopping-centres_feedback">
+			<section>
+				<p>A wide variety of resources available to you depend on the wealth of your suburb &mdash; from food, medical care and banking, to libraries and public pools.</p>
+				<p>Quality changes a heap, too. All the grocery stores in the world mean very little if they don't stock anything. In poorer suburbs, it’s easier to buy fast food than it is to buy healthy produce.</p>
+				<p>And if you’re stuck without a car, that extra amount of distance is a big deal. Travelling on public transport with large amounts of groceries isn’t an option.</p>
+			</section>
 		</div>
 
 		<div class="quiz-container number-books">

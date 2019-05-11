@@ -8,6 +8,7 @@
 body {
 	width: 100%;
 	margin: 0px;
+	background: #eee;
 }
 
 /* Text, font */
@@ -73,6 +74,8 @@ svg, object, img {
 	position: relative;
 	background: none;
 	min-height: 90vh;
+	background-position: center;
+	background-size: cover;
 }
 
 .space {
@@ -219,6 +222,22 @@ section.geography fieldset {
 	/*background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;*/
 }
 
+/* Section Styling */
+
+#intro {
+	background-image: url('../media/brisbane-landscape.jpg');
+	background-position: 50% 25%;
+}
+
+@media screen and (max-width: 800px) {
+	#intro p {
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 20px;
+		padding: 1em;
+	}
+}
+
+
 form.three-class div {
 	display: flex;
 	flex-direction: row;
@@ -256,6 +275,7 @@ form.three-class p {
 }
 
 div.three-class {
+	border-radius: 20px;
 	margin: auto;
 	margin-top: 3rem;
 	width: 80%;

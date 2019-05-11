@@ -41,41 +41,40 @@
 			<h1 class="arrow">Class is <span class="fadeIn slow animated delay-2s">in Brisbane</span></h1>
 			<p>In Australia, class is not very visible. We’re a have-a-go country where the concept of the blue-collar hard worker is idolised.</p>
 			<p>But don’t be fooled. The divisions of class are hidden, yet if you look hard enough you will find very tangible class structures. And these structures confine us in all sorts of ways, in all aspects of our lives.</p>
-			<div class="three-class">
-				<form name="three-class" class="three-class" action="action">
-					<fieldset>
-						<legend>So, what class do you reckon you fit into?</legend>
-						<div class="class-options">
-							<p class="working-class">
-								<input id="three-class_working" type="radio" name="three-class">
-								<label for="three-class_working">Working Class</label>
-							</p>
-							<p class="middle-class">
-								<input id="three-class_middle" type="radio" name="three-class">
-								<label for="three-class_middle">Middle Class</label>
-							</p>
-							<p class="upper-class glint">
-								<input id="three-class_upper" type="radio" name="three-class">
-								<label for="three-class_upper">Upper Class</label>
-							</p>
-						</div>
-						<div class="other-options">
-							<p>
-								<input id="three-class_none" type="radio" name="three-class">
-								<label for="three-class_none">I don't think Australia has class.</label>
-							</p>
-							<p>
-								<input id="three-class_idk" type="radio" name="three-class">
-								<label for="three-class_idk">I don't know</label>
-							</p>
-						</div>
-					</fieldset>
-				</form>
-			</div>
-
 		</header>
-
-		<section id="three-class_feedback" class="hidden">
+		<section class="class-intro">
+		<div class="three-class">
+			<form name="three-class" class="three-class" action="action">
+				<fieldset>
+					<legend>So, what class do you reckon you fit into?</legend>
+					<div class="class-options">
+						<p class="working-class">
+							<input id="three-class_working" type="radio" name="three-class">
+							<label for="three-class_working">Working Class</label>
+						</p>
+						<p class="middle-class">
+							<input id="three-class_middle" type="radio" name="three-class">
+							<label for="three-class_middle">Middle Class</label>
+						</p>
+						<p class="upper-class glint">
+							<input id="three-class_upper" type="radio" name="three-class">
+							<label for="three-class_upper">Upper Class</label>
+						</p>
+					</div>
+					<div class="other-options">
+						<p>
+							<input id="three-class_none" type="radio" name="three-class">
+							<label for="three-class_none">I don't think Australia has class.</label>
+						</p>
+						<p>
+							<input id="three-class_idk" type="radio" name="three-class">
+							<label for="three-class_idk">I don't know</label>
+						</p>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div id="three-class_feedback" class="hidden">
 			<div class="space">
 			<p>
 				While class seems pretty straightforward, there's a lot going on under the surface that affect is directly. It might make you think very differently from your initial answer.
@@ -115,6 +114,7 @@
 					</fieldset>
 				</form>
 			</div>
+		</div>
 		</section>
 
 		<section id="employment-type_feedback" class="hidden sidebyside">
@@ -134,9 +134,16 @@
 
 		<section class="hero geography">
 			<div>
-		<p> So class is more than job distinctions or salary. But this is just the tip of the iceberg. Wealth affects where you live, which has all sorts of influences on your life.</p>
-		<p>Naturally, wealth determines what housing you can buy, and in turn where you can live. But, wealth is becoming more and more geographically isolated.</p>
-		<p>We can measure this by the number of suburbs where the average person is in the bottom 10% in terms of wealth. The closer to the edges of disadvantage a suburb is, the more people fall under this threshold. In the 5 years from 2006 to 2011, the number of deeply poor suburbs rose by 42%.</p>
+		<p>So class is more than job distinctions or salary. But this is just the tip of the iceberg.</p>
+		<p>Naturally, wealth determines what housing you can buy, and in turn where
+			you can live. But, wealth is becoming more and more geographically
+			isolated.</p>
+		<p>We can measure this by the number of suburbs where the average person is
+			in the bottom 10% in terms of wealth. The closer to the edges of
+			disadvantage a suburb is, the more people fall under this threshold. In
+		the 5 years from 2006 to 2011, the number of deeply poor suburbs rose by
+		42%.</p>
+		<p>This geographic divide has the most visible effect on your daily life.</p>
 			</div>
 			<div>
 			<form name="suburb-wealth" id="suburb-wealth">

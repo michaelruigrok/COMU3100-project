@@ -28,7 +28,6 @@ p {
 	line-height: 1.8em;
 	margin-left: auto;
 	margin-right: auto;
-	font-weight: 600;
 	font-family: "Noto Sans", serif;
 }
 
@@ -86,6 +85,10 @@ svg, object, img {
 	width: 100%;
 }
 
+.sidebyside > div {
+	margin: auto;
+}
+
 @media screen and (max-width: 800px) {
 	.sidebyside {
 		flex-direction: column;
@@ -118,6 +121,7 @@ svg, object, img {
 	min-height: 90vh;
 	display: flex;
 	color: white;
+	text-shadow: black 1px 0 5px;
 }
 
 form.quiz {
@@ -181,11 +185,13 @@ section.geography fieldset {
 
 #unemployment_chart {
 	min-width: 40%;
+	margin: 0;
 }
 
 .quiz-container.employment-type label, .quiz-container.employment-type legend{
 	padding: 0.4rem;
-	background: rgba(0, 0, 0, 1);
+	background: rgba(22, 116, 216, 0.9);
+
 }
 
 .commute-time-map {

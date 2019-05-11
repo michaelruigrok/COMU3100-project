@@ -65,7 +65,7 @@ section {
 	filter: brightness(70%);
 }
 
-svg, object, img {
+svg, object {
 	max-width: 100vw;
 	max-height: 300vh;
 }
@@ -143,9 +143,6 @@ form.quiz label {
 
 
 /* Specific Quiz Questions */
-.quiz-container.commute-time video {
-	object-position: 77% 62%;
-}
 
 .quiz-container.employment-type img {
 	object-position: 25%;
@@ -169,7 +166,7 @@ section.geography div {
 	max-width: 43%;
 	background: rgba(255, 255, 255, 0.7);
 	border-radius: 20px;
-	padding: 1em;
+	padding: 1em 0;
 }
 
 @media screen and (max-width: 666px) {
@@ -197,17 +194,52 @@ section.geography fieldset {
 
 }
 
+.quiz-container.commute-time video {
+	object-position: 77% 62%;
+}
+
 .commute-time-map {
   background-image: url('../img/brisbane-commute-map.png');
   background-position: center;
   background-size: cover;
+  display: flex;
 }
+
+.commute-time-map div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.commute-time-map p {
+	width: 30%;
+	margin: auto;
+	margin-left: 2%;
+	font-size: 1.3em;
+}
+
 
 .commute-map-legend {
   position: absolute;
   right: 15px;
   bottom: 15px;
   border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+	.commute-time-map p {
+		width: 100%;
+		margin: inherit;
+	}
+	.commute-time-map p:nth-child(2) {
+		margin-top: auto;
+	}
+	.commute-map-legend {
+		position: static;
+		flex-grow: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .commute-map-copyright {

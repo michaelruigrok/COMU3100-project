@@ -7,8 +7,12 @@ function showHidden(query) {
 
 function addQListener(qName) {
 	document.querySelectorAll("input[name='" + qName + "']")
-		.forEach(e => e.addEventListener("click",
-			() => showHidden("#" + qName + "_feedback")));
+		.forEach(function(input) {
+			input.addEventListener("click",
+				() => showHidden("#" + qName + "_feedback"));
+
+			if (input.checked) showHidden("#" + qName + "_feedback");
+		});
 }
 
 document.querySelectorAll("form.three-class p")
@@ -22,6 +26,8 @@ document.querySelectorAll("form.three-class p")
 		showHidden("#three-class_feedback");
 	}));
 
+
+addQListener("three-class");
 addQListener("commute-time");
 addQListener("employment-type");
 addQListener("books");

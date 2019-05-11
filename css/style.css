@@ -213,15 +213,24 @@ section.geography fieldset {
 	/*background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;*/
 }
 
-form.three-class div.class-options {
+form.three-class div {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 }
 
+form.three-class div.other-options {
+	width: 80%;
+	margin: auto;
+}
+
 @media screen and (max-width: 800px) {
-	form.three-class div.class-options {
+	form.three-class div {
 		flex-direction: column;
+	}
+
+	form.three-class div.other-options {
+		width: 100%;
 	}
 
 	p {
@@ -246,12 +255,17 @@ div.three-class {
 	width: 80%;
 }
 
+form.three-class p:hover {
+	background: #e7e7e7;
+}
+
 form.three-class p.working-class:hover {
-	background: #e4e4e4;
+	background: #ccc;
+	text-shadow: white 1px 0 4px;
 }
 
 form.three-class p.middle-class:hover {
-	background-image: linear-gradient(to bottom, white, #e4e4e4);
+	background-image: linear-gradient(to bottom, white, #f4f4f4, #e7e7e7);
 }
 
 form.three-class p.upper-class:hover {
@@ -267,17 +281,17 @@ form.three-class p.upper-class:hover {
   position: absolute;
   top: -110%;
   left: -210%;
-  width: 200%;
-  height: 200%;
+  width: 250%;
+  height: 100%;
   opacity: 0;
   transform: rotate(-30deg);
 
   background: rgba(255, 255, 255, 0.13);
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.13) 77%,
-    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.5) 77%,
+    rgba(255, 255, 255, 0.8) 92%,
     rgba(255, 255, 255, 0.0) 100%
   );
 }
@@ -290,11 +304,11 @@ form.three-class p.upper-class:hover {
 
 .glint:hover:after {
   opacity: 1;
-  top: -30%;
-  left: -30%;
+  top: 25%;
+  left: 25%;
   transition-property: left, top, opacity;
-  transition-duration: 0.7s, 0.7s, 0.15s;
-  transition-timing-function: ease;
+  transition-duration: 0.7s, 0.7s, 0.5s;
+  transition-timing-function: linear;
 }
 
 /* Active state */

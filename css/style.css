@@ -154,6 +154,7 @@ form.quiz label {
 }
 
 section.geography {
+	text-shadow: white 0 0 3px;
 	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/BrisbaneRiver02_gobeirne-edit1.jpg/1280px-BrisbaneRiver02_gobeirne-edit1.jpg');
 	background-position: center;
 	background-size: cover;
@@ -164,7 +165,7 @@ section.geography {
 section.geography div {
 	margin: auto;
 	max-width: 43%;
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(255, 255, 255, 0.6);
 	border-radius: 20px;
 	padding: 1em 0;
 }
@@ -199,10 +200,11 @@ section.geography fieldset {
 }
 
 .commute-time-map {
-  background-image: url('../img/brisbane-commute-map.png');
-  background-position: center;
-  background-size: cover;
-  display: flex;
+	min-height: 100vh;
+	background-image: url('../img/brisbane-commute-map.png');
+	background-position: center;
+	background-size: cover;
+	display: flex;
 }
 
 .commute-time-map div {
@@ -215,6 +217,7 @@ section.geography fieldset {
 	width: 30%;
 	margin: auto;
 	margin-left: 2%;
+	text-shadow: rgba(255,255,255,0.7) 0 0 7px;
 	font-size: 1.3em;
 }
 

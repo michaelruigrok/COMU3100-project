@@ -340,7 +340,7 @@ form.three-class p.upper-class:hover {
   content: "";
   position: absolute;
   top: -110%;
-  left: -210%;
+  left: -150%;
   width: 250%;
   height: 100%;
   opacity: 0;

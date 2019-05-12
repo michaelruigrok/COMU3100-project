@@ -35,6 +35,13 @@ p {
 	margin-right: auto;
 }
 
+@media screen and (max-width: 800px) {
+	p {
+		width: 90%;
+		margin: initial auto;
+	}
+}
+
 /* animations */
 .slow {
   animation-duration: 5s;
@@ -98,24 +105,6 @@ svg, object {
 @media screen and (max-width: 800px) {
 	.sidebyside {
 		flex-direction: column;
-	}
-
-	.sidebyside p {
-		margin: auto;
-	}
-	.sidebyside p {
-		width: 90%;
-		margin: auto;
-	}
-}
-@media screen and (max-width: 800px) {
-	form.three-class div.class-options {
-		flex-direction: column;
-	}
-
-	p {
-		width: 90%;
-		margin: auto;
 	}
 }
 
@@ -290,11 +279,6 @@ form.three-class div.other-options {
 
 	form.three-class div.other-options {
 		width: 100%;
-	}
-
-	p {
-		width: 90%;
-		margin: auto;
 	}
 }
 

@@ -250,6 +250,7 @@ section.geography fieldset {
 #intro {
 	background-image: url('../media/brisbane-landscape.jpg');
 	background-position: 50% 25%;
+	text-shadow: white 0 0 3px;
 }
 
 @media screen and (max-width: 800px) {

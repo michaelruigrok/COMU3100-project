@@ -31,3 +31,34 @@ addQListener("three-class");
 addQListener("commute-time");
 addQListener("employment-type");
 addQListener("books");
+
+
+
+/* Scroll prevention */
+$(function () {
+    var scrollMin = function (selector) {
+        var scrollY;
+        scrollY = $(selector).offset().top;
+        scrollY = Math.max(scrollY, 0);
+        return scrollY;
+    };
+    var scrollMax = function (selector) {
+        var scrollY;
+        scrollY = $(selector).offset().top + $(selector).height() - $(window).height();
+        scrollY = Math.min(scrollY, $(document).height() - $(window).height());
+        scrollY = Math.max(scrollY, scrollMin(selector));
+        return scrollY;
+    };
+    var selector = "#test";
+    $(document).scrollTop(scrollMin(selector));
+    $(document).on("scroll", function (e) {
+        var windowScrollTop = $(window).scrollTop();
+        if (windowScrollTop < scrollMin(selector)) {
+            console.log("hit top");
+            $(document).scrollTop(scrollMin(selector));
+        } else if (windowScrollTop > scrollMax(selector)) {
+            console.log("hit bottom");
+            $(document).scrollTop(scrollMax(selector));
+        }
+    });
+});

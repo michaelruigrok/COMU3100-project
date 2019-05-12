@@ -86,6 +86,7 @@ svg, object {
 	min-height: 90vh;
 	background-position: center;
 	background-size: cover;
+	border-bottom: 1.4px solid black;
 }
 
 .space {
@@ -240,7 +241,7 @@ section.geography fieldset {
   background-color: #fab;
 }
 
-.quiz-container.number-books {
+.quiz-container.books {
 	background-color: black;
 	/*background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;*/
 }

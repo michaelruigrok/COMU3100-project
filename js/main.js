@@ -2,6 +2,11 @@ function showHidden(query) {
 	document.querySelectorAll(query).forEach(function(e) {
 		e.classList.add("fadeIn", "animated");
 		e.classList.remove("hidden");
+
+		// Scroll to next section
+		$([document.documentElement, document.body]).delay(300).animate({
+			scrollTop: $(e).offset().top - $(window).height() / 20
+		}, 1000);
 	});
 }
 

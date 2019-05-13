@@ -74,7 +74,8 @@ var SuburbWealth = (function() {
 		"Larapinta": ["Forest Lake","Pallara","Greenbank"],
 		"Lytton": ["Wynnum","Pinkenba","Hemmant"],
 		"Mackenzie": ["Wishart", "Mansfield", "Rochedale", "Burbank", "Carindale"],
-		"Mt Coot-tha": ["Brookfield","Gap","Toowong","Kenmore","Bardon"],
+		"Mt Coottha": ["Brookfield","Gap","Toowong","Kenmore","Bardon"],
+		"Mt Coot tha": ["Brookfield","Gap","Toowong","Kenmore","Bardon"],
 		"Mt Crosby": ["Karana","Karalee","Brookfield","Moggil"],
 		"Mt Gravatt": ["Gravatt"],
 		"Mt Gravatt East": ["Gravatt","Mansfield"],
@@ -155,15 +156,28 @@ var SuburbWealth = (function() {
 
 	d3.csv("data/seifa-qld-2016.csv").then(function(data) {
 
+		document.querySelector("#suburb-wealth input")
+			.addEventListener("input", function (e) {
+				if (this.validity.patternMismatch) {
+					this.setCustomValidity("Please enter a suburb name");
+				} else {
+					this.setCustomValidity("");
+				}
+			});
+
 		document.querySelector("#suburb-wealth fieldset").disabled = false;
 		document.querySelector("#suburb-wealth").onsubmit = function(e) {
 			e.preventDefault(); // ensure page does not send data
 
 			var input = document.querySelector("#suburb-wealth input");
-			if (input.value.length <3) return false;
+			var search = input.value;
+
+			var punctuation = /[.,\/#@!$%\^&\*;:{}=\-_`~()]/g;
+			search = search.replace(punctuation, "");
+			console.log(search);
 
 			clearTable("#suburb-wealth-results");
-			var suburbs = getMatchingSuburbs(data, input.value);
+			var suburbs = getMatchingSuburbs(data, search);
 			if (suburbs && suburbs.length === 0) {
 				addTableRow("#suburb-wealth-results", ["No data found"]);
 			} else {

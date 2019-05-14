@@ -1,3 +1,8 @@
+function showAll() {
+	document.querySelectorAll("body > *")
+		.forEach(e => e.classList.remove("hidden"));
+}
+
 function showHidden(query, options) {
 	document.querySelectorAll(query).forEach(function(e) {
 		e.classList.add("fadeIn", "animated");
@@ -45,9 +50,12 @@ document.querySelectorAll("form.three-class p")
 addQListener("three-class");
 addQListener("employment-type");
 addQListener("commute-time", { offset: 0 });
+addQListener("shopping-centres");
+addQListener("close-friends-class");
+addQListener("social-groups");
+addQListener("galleries");
 addQListener("books");
-
-
+addQListener("shakespeare");
 
 /* Scroll prevention */
 $(function () {

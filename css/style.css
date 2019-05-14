@@ -241,7 +241,12 @@ section.geography fieldset {
   background-color: #fab;
 }
 
-.quiz-container.books {
+.quiz-container.close-friends-class,
+.quiz-container.social-groups,
+.quiz-container.galleries,
+.quiz-container.books,
+.quiz-container.shakespeare
+{
 	background-color: black;
 	/*background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;*/
 }

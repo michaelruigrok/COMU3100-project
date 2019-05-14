@@ -39,9 +39,17 @@
 	</head>
 	<body>
 		<header class="intro text-center section-padding" id="intro">
-			<h1 class="arrow">Class is <span class="fadeIn slow animated delay-2s">in Brisbane</span></h1>
-			<p>In Australia, class is not very visible. We’re a have-a-go country where the concept of the blue-collar hard worker is idolised.</p>
-			<p>But don’t be fooled. The divisions of class are hidden, yet if you look hard enough you will find very real class structures. And these structures confine us in all sorts of ways, in all aspects of our lives.</p>
+			<div class="background-video">
+				<video loop autoplay muted>
+					<source src="media/cultural-centre-timelapse.webm" type="video/webm"/>
+					<source src="media/cultural-centre-timelapse.mp4" type="video/mp4"/>
+				</video>
+			</div>
+			<div class="overlay">
+				<h1 class="arrow">Class is <span class="fadeIn slow animated delay-2s">in Brisbane</span></h1>
+				<p>In Australia, class is not very visible. We’re a have-a-go country where the concept of the blue-collar hard worker is idolised.</p>
+				<p>But don’t be fooled. The divisions of class are hidden, yet if you look hard enough you will find very real class structures. And these structures confine us in all sorts of ways, in all aspects of our lives.</p>
+			</div>
 		</header>
 		<section class="class-intro">
 		<div class="three-class">
@@ -341,22 +349,26 @@
 			<div class="quiz-container galleries">
 				<form name="galleries" class="quiz galleries" action="action">
 					<fieldset>
-						<legend>How many galleries do you read each month?</legend>
+						<legend>When was the last time you went to a museum or art gallery?</legend>
 						<p>
 							<input id="galleries_1" type="radio" name="galleries">
-							<label for="galleries_1">Never</label>
+							<label for="galleries_1">In the last month</label>
 						</p>
 						<p>
 							<input id="galleries_2" type="radio" name="galleries">
-							<label for="galleries_2">1-3</label>
+							<label for="galleries_2">In the last few months</label>
 						</p>
 						<p>
 							<input id="galleries_3" type="radio" name="galleries">
-							<label for="galleries_3">4-7</label>
+							<label for="galleries_3">This year</label>
 						</p>
 						<p>
 							<input id="galleries_4" type="radio" name="galleries">
-							<label for="galleries_4">8+</label>
+							<label for="galleries_4">A couple of years ago</label>
+						</p>
+						<p>
+							<input id="galleries_5" type="radio" name="galleries">
+							<label for="galleries_5">Never</label>
 						</p>
 					</fieldset>
 				</form>
@@ -451,7 +463,7 @@
 							<label for="six-class_new">New Workers</label>
 						</p>
 					</div>
-					<div class="other-options">
+					<div>
 						<p>
 							<input id="six-class_middle" type="radio" name="three-class">
 							<label for="six-class_middle">Established Middle</label>

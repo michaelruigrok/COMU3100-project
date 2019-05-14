@@ -17,15 +17,16 @@ body {
 }
 
 h1 {
-  font-size: 3.5em;
-  font-family: "Eczar", serif;
-  font-weight: normal;
-  margin-top: 0px;
+	text-align: center;
+	font-size: 3.5em;
+	font-family: "Eczar", serif;
+	font-weight: normal;
+	margin-top: 0px;
 }
 
 h1 > span {
   padding-bottom: 0.4rem;
-  border-bottom: solid 3px #BE4343;
+  border-bottom: solid 3px #D80;
 }
 
 p {
@@ -73,6 +74,10 @@ section {
 
 .background-video > video {
 	filter: brightness(70%);
+}
+
+.overlay {
+	margin: auto;
 }
 
 svg, object {
@@ -254,16 +259,22 @@ section.geography fieldset {
 /* Section Styling */
 
 #intro {
-	background-image: url('../media/brisbane-landscape.jpg');
+	background: none;
+	color: white;
 	background-position: 50% 25%;
-	text-shadow: white 0 0 3px;
+	text-shadow: black 0 0 3px;
+	font-size: 1.2em;
+	display: flex;
+}
+
+#intro p {
+	text-shadow: black 0 0 6px;
+	width: 60%;
 }
 
 @media screen and (max-width: 800px) {
-	#intro p {
-		background: rgba(255, 255, 255, 0.5);
-		border-radius: 20px;
-		padding: 1em;
+	#intro span {
+		display: inline-block;
 	}
 }
 

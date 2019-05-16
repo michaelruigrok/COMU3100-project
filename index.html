@@ -127,7 +127,7 @@
 		</section>
 
 		<div id="employment-type_feedback" class="hidden">
-		<section class="sidebyside">
+		<section class="underemployment sidebyside">
 			<div>
 				<p>In the case of part time jobs, contract work, and self-employment, <strong>the amount of work you can complete varies wildly</strong>. And putting extra effort into getting enough hours of work in each week means extra stress.</p>
 				<p>This is <strong>underemployment</strong>, it's a big issue that isn't talked about. The number of people who are underemployed is <strong>almost as large</strong> as those who are unemployed.
@@ -182,7 +182,7 @@
 			<div class="background-media">
 				<video loop autoplay muted>
 					<source src="media/bus-stop-traffic.webm" type="video/webm"/>
-						<source src="media/bus-stop-traffic.mp4" type="video/mp4"/>
+					<source src="media/bus-stop-traffic.mp4" type="video/mp4"/>
 				</video>
 			</div>
 			<form name="commute-time" class="quiz number-commute-time" action="action">
@@ -258,19 +258,27 @@
 		</div>
 
 		<div id="shopping-centres_feedback" class="hidden">
-			<section>
+			<section class="resource-access">
 				<p>A wide variety of resources available to you depend on the wealth of your suburb &mdash; from food, medical care and banking, to libraries and public pools.</p>
 				<p>Quality changes a heap, too. All the grocery stores in the world mean very little if they don't stock anything. In poorer suburbs, it’s easier to buy fast food than it is to buy healthy produce.</p>
 				<p>And if you’re stuck without a car, that extra amount of distance is a big deal. Travelling on public transport with large amounts of groceries isn’t an option.</p>
 			</section>
 
-			<section>
-				<p>Another thing that where you live influences is your community.</p>
-				<p>You’ve probably heard ‘It’s not what you know, it’s who you know’, but this distinction commonly sits along class lines.</p>
-				<p>If you think about the way that we make friends, it starts to make sense. You make friends with the people you grew up with, the places that you live, who you work with, and those who can afford similar interests.</p>
+			<section class="social-intro">
+				<div class="background-media">
+					<img src="media/tennis-court-net-close.jpg"/>
+				</div>
+				<div>
+					<p>Another thing that where you live influences is your community.</p>
+					<p>You’ve probably heard ‘It’s not what you know, it’s who you know’, but this distinction commonly sits along class lines.</p>
+					<p>If you think about the way that we make friends, it starts to make sense. You make friends with the people you grew up with, the places that you live, who you work with, and those who can afford similar interests.</p>
+				</div>
 			</section>
 
 			<div class="quiz-container close-friends-class">
+				<div class="background-media">
+					<img src="media/tennis-court-net-close.jpg"/>
+				</div>
 				<form name="close-friends-class" class="quiz close-friends-class" action="action">
 					<fieldset>
 						<legend>How many of your close friends and family work in similar jobs to you?</legend>
@@ -299,8 +307,13 @@
 			</div>
 		</div>
 
+		<!-- This element should be within the next div, but for some reason it
+		adds an empty white space between each elements. It's awful -->
+		<div class="background-media">
+			<img src="media/Suncorp-back-under-tree.jpg"/>
+		</div>
 		<div id="close-friends-class_feedback" class="hidden">
-			<section>
+			<section class="social-circles">
 				<p>This is called <strong>Social Capital</strong>, and it’s an important factor that social scientists take into account when considering class.</p>
 				<p>Different groups you interact with might sit differently in terms of
 					class. You might be the first in your family to attend university,
@@ -311,6 +324,9 @@
 			</section>
 
 			<div class="quiz-container social-groups">
+				<div class="background-media">
+					<img src="media/tennis-court-net-close.jpg"/>
+				</div>
 				<form name="social-groups" class="quiz social-groups" action="action">
 					<fieldset>
 						<legend>Which of your social groups has the highest class standing?</legend>
@@ -337,7 +353,7 @@
 		</div>
 
 		<div id="social-groups_feedback" class="hidden">
-			<section>
+			<section class="cultural-capital">
 				<p>Class shapes the people you regularly interact with, which in turn shapes your interests.</p>
 
 				<p>The class you fit into also has a big role on your media tastes - the classic <strong>low brow&ndash;high brow divide</strong>.</p>
@@ -347,6 +363,9 @@
 			</section>
 
 			<div class="quiz-container galleries">
+				<div class="background-media">
+					<img src="media/QAG-centre-side.JPG"/>
+				</div>
 				<form name="galleries" class="quiz galleries" action="action">
 					<fieldset>
 						<legend>When was the last time you went to a museum or art gallery?</legend>
@@ -376,7 +395,7 @@
 		</div>
 
 		<div id="galleries_feedback" class="hidden">
-			<section>
+			<section class="diverse-tastes">
 				<p>But It’s not that low-brow and high-brow media are split between lower and upper classes.</p>
 				<p>If you’re higher class you might still watch the latest Bachelorette, but you might swear you only watch it ‘ironically’.</p>
 				<p>And the upper class tend to be better followers of new, upcoming and trending acts.</p>
@@ -384,6 +403,9 @@
 			</section>
 
 			<div class="quiz-container books">
+				<div class="background-media">
+					<img src="media/council-libary-shelves.jpg"/>
+				</div>
 				<form name="books" class="quiz books" action="action">
 					<fieldset>
 						<legend>How many books do you read each month?</legend>
@@ -409,7 +431,7 @@
 		</div>
 
 		<div id="books_feedback" class="hidden">
-			<section>
+			<section class="critical-consumption">
 				<p>The real difference between what media you consume is the <strong>way you consume it.</strong></p>
 				<p>Those in higher classes are more likely to break down and analyse what they watch, and get enjoyment from doing it.</p>
 				<p>This means they are more likely to consume media to expand their horizons, and as part of lifelong learning.</p>
@@ -419,6 +441,9 @@
 			</section>
 
 			<div class="quiz-container shakespeare">
+				<div class="background-media">
+					<img src="media/clean-classroom.jpg"/>
+				</div>
 				<form name="shakespeare" class="quiz shakespeare" action="action">
 					<fieldset>
 						<legend>Did you read or watch a Shakespeare play before high school?</legend>
@@ -436,13 +461,13 @@
 		</div>
 
 		<div id="shakespeare_feedback" class="hidden">
-			<section>
+			<section class="education">
 				<p>At this point, your cultural capital is <strong>absolutely crucial</strong>. If you’ve had practice watching media in a critical way before school, you’re going to do better.</p>
 				<p>And better grades means you’re more likely to finish highschool, and get into uni.</p>
 				<p>Going to uni is a big deal nowadays. Credential Creep means a race to the top for job requirements - what used to need highschool or a diploma now require much more.</p>
 			</section>
 
-			<section>
+			<section class="six-class-intro">
 				<p>So how do we decide what our class is when considering so many aspects of our lives?</p>
 				<p>The categories are completely made up, so it’s up to us to decide what best fits the Australian circumstance. But there’s always going to be trade offs.</p>
 				<p>Jill Sheppard and Nick Biddle came up with six classes. Each of these categories are distinct in each way we’ve talked about today - career, wealth, where they live, who they’re mates with, and what entertainment they like.</p>

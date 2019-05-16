@@ -141,123 +141,11 @@ form.quiz label {
 }
 
 
-/* Specific Quiz Questions */
+/*
+ * Section-specific styling
+ */
 
-.quiz-container.employment-type img {
-	object-position: 25%;
-}
-
-section.geography {
-	text-shadow: white 0 0 3px;
-	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/BrisbaneRiver02_gobeirne-edit1.jpg/1280px-BrisbaneRiver02_gobeirne-edit1.jpg');
-	background-position: center;
-	background-size: cover;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-section.geography div {
-	margin: auto;
-	max-width: 43%;
-	background: rgba(255, 255, 255, 0.6);
-	border-radius: 20px;
-	padding: 1em 0;
-}
-
-@media screen and (max-width: 666px) {
-	section.geography div {
-		max-width: 90%;
-	}
-}
-
-section.geography fieldset {
-	border: none;
-}
-
-#suburb-wealth-results {
-	border-spacing: 2em 0.5em;
-}
-
-#unemployment_chart {
-	min-width: 40%;
-	margin: 0;
-}
-
-.quiz-container.employment-type label, .quiz-container.employment-type legend {
-	padding: 0.4rem;
-	background: rgba(22, 116, 216, 0.9);
-
-}
-
-.quiz-container.commute-time video {
-	object-position: 77% 62%;
-}
-
-.commute-time-map {
-	min-height: 100vh;
-	background-image: url('../img/brisbane-commute-map.png');
-	background-position: center;
-	background-size: cover;
-	display: flex;
-}
-
-.commute-time-map div {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-.commute-time-map p {
-	width: 30%;
-	margin: auto;
-	margin-left: 2%;
-	text-shadow: rgba(255,255,255,0.7) 0 0 7px;
-	font-size: 1.3em;
-}
-
-
-.commute-map-legend {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  border-radius: 15px;
-}
-
-@media screen and (max-width: 800px) {
-	.commute-time-map p {
-		width: 100%;
-		margin: inherit;
-	}
-	.commute-time-map p:nth-child(2) {
-		margin-top: auto;
-	}
-	.commute-map-legend {
-		position: static;
-		flex-grow: 0;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-.commute-map-copyright {
-  margin: 0;
-  width: auto;
-  padding: 2px;
-  background-color: #fab;
-}
-
-.quiz-container.close-friends-class,
-.quiz-container.social-groups,
-.quiz-container.galleries,
-.quiz-container.books,
-.quiz-container.shakespeare
-{
-	background-color: black;
-	/*background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;*/
-}
-
-/* Section Styling */
-
+/* Introduction */
 #intro {
 	background: none;
 	color: white;
@@ -277,7 +165,6 @@ section.geography fieldset {
 		display: inline-block;
 	}
 }
-
 
 form.three-class div {
 	display: flex;
@@ -350,11 +237,11 @@ form.three-class p.upper-class:hover {
 
   background: rgba(255, 255, 255, 0.13);
   background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.03) 0%,
-    rgba(255, 255, 255, 0.5) 77%,
-    rgba(255, 255, 255, 0.8) 92%,
-    rgba(255, 255, 255, 0.0) 100%
+	to right,
+	rgba(255, 255, 255, 0.03) 0%,
+	rgba(255, 255, 255, 0.5) 77%,
+	rgba(255, 255, 255, 0.8) 92%,
+	rgba(255, 255, 255, 0.0) 100%
   );
 }
 
@@ -377,4 +264,128 @@ form.three-class p.upper-class:hover {
 
 .glint:active:after {
   opacity: 0;
+}
+
+
+/* Economic Capital */
+
+.quiz-container.employment-type img {
+	object-position: 25%;
+}
+
+.quiz-container.employment-type label, .quiz-container.employment-type legend {
+	padding: 0.4rem;
+	background: rgba(22, 116, 216, 0.9);
+}
+
+#unemployment_chart {
+	min-width: 40%;
+	margin: 0;
+}
+
+
+/* Geographic Capital */
+
+section.geography {
+	text-shadow: white 0 0 3px;
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/BrisbaneRiver02_gobeirne-edit1.jpg/1280px-BrisbaneRiver02_gobeirne-edit1.jpg');
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.geography div {
+	margin: auto;
+	max-width: 43%;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 20px;
+	padding: 1em 0;
+}
+
+@media screen and (max-width: 666px) {
+	section.geography div {
+		max-width: 90%;
+	}
+}
+
+section.geography fieldset {
+	border: none;
+}
+
+#suburb-wealth-results {
+	border-spacing: 2em 0.5em;
+}
+
+.quiz-container.commute-time video {
+	object-position: 77% 62%;
+}
+
+.commute-time-map {
+	min-height: 100vh;
+	background-image: url('../img/brisbane-commute-map.png');
+	background-position: center;
+	background-size: cover;
+	display: flex;
+}
+
+.commute-time-map div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.commute-time-map p {
+	width: 30%;
+	margin: auto;
+	margin-left: 2%;
+	text-shadow: rgba(255,255,255,0.7) 0 0 7px;
+	font-size: 1.3em;
+}
+
+
+.commute-map-legend {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+	.commute-time-map p {
+		width: 100%;
+		margin: inherit;
+	}
+	.commute-time-map p:nth-child(2) {
+		margin-top: auto;
+	}
+	.commute-map-legend {
+		position: static;
+		flex-grow: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.commute-map-copyright {
+  margin: 0;
+  width: auto;
+  padding: 2px;
+  background-color: #fab;
+}
+
+/* Social Capital */
+
+.quiz-container.close-friends-class,
+.quiz-container.social-groups,
+.quiz-container.galleries,
+.quiz-container.books,
+{
+	background-color: black;
+	/*background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Brisbane_city_skyline.jpg') no-repeat center center;*/
+}
+
+/* Cultural Capital */
+
+.quiz-container.shakespeare {
 }

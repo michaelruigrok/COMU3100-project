@@ -149,7 +149,7 @@ form.quiz label {
 #intro {
 	background: none;
 	color: white;
-	background-position: 50% 25%;
+	background-position: center 25%;
 	text-shadow: black 0 0 3px;
 	font-size: 1.2em;
 	display: flex;
@@ -388,4 +388,7 @@ section.geography fieldset {
 /* Cultural Capital */
 
 .quiz-container.shakespeare {
+	background-image: url('../media/clean-classroom.jpg');
+	background-position: center bottom;
+	background-size: cover;
 }

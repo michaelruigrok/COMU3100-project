@@ -1,7 +1,8 @@
-function showAll() {
+// DEBUG, to REMOVE! All sections will be shown.
+//function showAll() {
 	document.querySelectorAll("body > *")
 		.forEach(e => e.classList.remove("hidden"));
-}
+//}
 
 function showHidden(query, options) {
 	document.querySelectorAll(query).forEach(function(e) {

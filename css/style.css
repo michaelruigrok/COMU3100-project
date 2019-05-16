@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Eczar|Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Eczar|Noto+Sans');
 
 /* Resets */
 * {
@@ -16,16 +16,17 @@ body {
 	font-family: "Noto Sans", sans-serif;
 }
 
-h1 {
+h1, h1 > * {
 	text-align: center;
-	font-size: 3.5em;
-	font-family: "Eczar", serif;
+	font-size: 3.8rem;
+	font-family: "Parisienne", serif;
 	font-weight: normal;
 	margin-top: 0px;
 }
 
 h1 > span {
   padding-bottom: 0.4rem;
+  font-size: 1.3em;
   border-bottom: solid 3px #D80;
 }
 
@@ -168,6 +169,10 @@ form.quiz label {
 }
 
 @media screen and (max-width: 800px) {
+	#intro p {
+		width: 90%;
+	}
+
 	#intro span {
 		display: inline-block;
 	}
@@ -195,8 +200,7 @@ form.three-class div.other-options {
 }
 
 form.three-class p {
-	border-radius: 1em;
-	border: 0.1em solid black;
+	border: 2px groove white;
 	margin: 2vmin 1vw;
 	padding: 1rem;
 	flex-grow: 1;
@@ -358,6 +362,7 @@ section.geography fieldset {
   right: 15px;
   bottom: 15px;
   border-radius: 15px;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 800px) {
@@ -396,6 +401,20 @@ section.geography fieldset {
 .social-intro p {
 	width: 38%;
 	margin-left: 5%;
+}
+
+.social-circles {
+	object-position: center bottom;
+	display: flex;
+	flex-direction: column;
+}
+
+.social-circles p {
+	margin-top: 0px;
+}
+
+.social-circles p:first-of-type {
+	margin-top: auto;
 }
 
 /* Cultural Capital */

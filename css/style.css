@@ -54,6 +54,16 @@ p {
 /* general layout */
 section {
 	background: none;
+	display: flex;
+	flex-direction: column;
+}
+
+section > p:first-of-type {
+	margin-top: auto;
+}
+
+section > p:last-of-type {
+	margin-bottom: auto;
 }
 
 .hidden, .hidden * {
@@ -91,7 +101,7 @@ svg, object {
 .hero, .quiz-container, #intro, section {
 	position: relative;
 	background: none;
-	min-height: 90vh;
+	min-height: 110vh;
 	background-position: center;
 	background-size: cover;
 	border-bottom: 1.4px solid black;
@@ -105,6 +115,7 @@ svg, object {
 .sidebyside {
 	display: flex;
 	width: 100%;
+	flex-direction: row;
 }
 
 .sidebyside > div {
@@ -126,9 +137,6 @@ svg, object {
 /* Quiz */
 
 .quiz-container {
-	position: relative;
-	background: none;
-	min-height: 90vh;
 	display: flex;
 	color: white;
 	text-shadow: black 0 0 2px;
@@ -307,6 +315,7 @@ section.geography {
 	background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 section.geography div {
@@ -336,7 +345,7 @@ section.geography fieldset {
 }
 
 .commute-time-map {
-	min-height: 100vh;
+	min-height: 110vh;
 	background-image: url('../img/brisbane-commute-map.png');
 	background-position: center;
 	background-size: cover;
@@ -383,10 +392,11 @@ section.geography fieldset {
 }
 
 .commute-map-copyright {
-  margin: 0;
-  width: auto;
-  padding: 2px;
-  background-color: #fab;
+	display: block;
+	margin: 0;
+	width: auto;
+	padding: 2px;
+	background-color: #fab;
 }
 
 /* Social Capital */
@@ -416,6 +426,10 @@ section.geography fieldset {
 
 .social-circles p:first-of-type {
 	margin-top: auto;
+}
+
+.social-circles p:last-of-type {
+	margin-bottom: 3em;
 }
 
 /* Cultural Capital */

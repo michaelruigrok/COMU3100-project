@@ -36,7 +36,7 @@ function addQListener(qName, options) {
 		});
 }
 
-document.querySelectorAll("form.three-class p")
+document.querySelectorAll("form.which-class p")
 	.forEach(e => e.addEventListener("click", function(e) {
 		var input = e.target.querySelector("input");
 		if (input) {

@@ -190,28 +190,28 @@ form.quiz label {
 	}
 }
 
-form.three-class div {
+form.which-class div {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 }
 
-form.three-class div.other-options {
+form.which-class div.other-options {
 	width: 80%;
 	margin: auto;
 }
 
 @media screen and (max-width: 800px) {
-	form.three-class div {
+	form.which-class div {
 		flex-direction: column;
 	}
 
-	form.three-class div.other-options {
+	form.which-class div.other-options {
 		width: 100%;
 	}
 }
 
-form.three-class p {
+form.which-class p {
 	border: 2px groove white;
 	margin: 2vmin 1vw;
 	padding: 1rem;
@@ -220,27 +220,27 @@ form.three-class p {
 	background: #ddd;
 }
 
-div.three-class {
+div.which-class {
 	border-radius: 20px;
 	margin: auto;
 	margin-top: 3rem;
 	width: 80%;
 }
 
-form.three-class p:hover {
+form.which-class p:hover {
 	background: #e7e7e7;
 }
 
-form.three-class p.working-class:hover {
+form.which-class p.working-class:hover {
 	background: #ccc;
 	text-shadow: white 0 0 4px;
 }
 
-form.three-class p.middle-class:hover {
+form.which-class p.middle-class:hover {
 	background-image: linear-gradient(to bottom, white, #f4f4f4, #e7e7e7);
 }
 
-form.three-class p.upper-class:hover {
+form.which-class p.upper-class:hover {
 	background-image: linear-gradient(to bottom, #FDE08D, #DF9F28);
 	/* from http://cssdeck.com/labs/mfqb3utw */
 }

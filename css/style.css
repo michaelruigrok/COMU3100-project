@@ -56,8 +56,6 @@ section {
 	background: none;
 	display: flex;
 	flex-direction: column;
-	padding-top: 3em;
-	padding-bottom: 3em;
 }
 
 section > p:first-of-type {
@@ -221,7 +219,6 @@ form.which-class p {
 }
 
 div.which-class {
-	border-radius: 20px;
 	margin: auto;
 	margin-top: 3rem;
 	width: 80%;
@@ -442,6 +439,8 @@ section.geography fieldset {
 }
 
 .six-class-intro {
+	padding-top: 3em;
+	padding-bottom: 3em;
 }
 
 .six-class-intro > dl {
@@ -451,4 +450,8 @@ section.geography fieldset {
 
 .six-class-intro dd {
 	margin-bottom: 1em;
+}
+
+div.six-class {
+	margin-bottom: 3rem;
 }

@@ -17,7 +17,7 @@ function scrollToNext(jquery, options) {
 	var delay = options.delay !== undefined ?
 		options.delay : 300;
 	var offset = options.offset !== undefined ?
-		options.offset : -($(window).height() / 22);
+		options.offset : +($(window).height() / 22);
 	$([document.documentElement, document.body]).delay(delay).animate({
 		scrollTop: $(jquery).offset().top + offset
 	}, 1000);
@@ -57,6 +57,7 @@ addQListener("social-groups");
 addQListener("galleries");
 addQListener("books");
 addQListener("shakespeare");
+addQListener("six-class");
 
 /* Scroll prevention */
 $(function () {

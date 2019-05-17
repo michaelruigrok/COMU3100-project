@@ -69,6 +69,7 @@ body .background-media {
 }
 
 .background-media video, .background-media img {
+	background-color: black;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;

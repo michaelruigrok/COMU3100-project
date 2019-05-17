@@ -130,7 +130,8 @@ svg, object {
 }
 
 .social-intro, 
-.social-circles {
+.social-circles,
+.education {
 	color: white;
 	text-shadow: black 0 0 5px;
 }

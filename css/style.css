@@ -8,7 +8,7 @@
 body {
 	width: 100%;
 	margin: 0px;
-	background: #eee;
+	background: #ccc;
 }
 
 /* Text, font */
@@ -94,11 +94,16 @@ svg, object {
 	min-height: 90vh;
 	background-position: center;
 	background-size: cover;
-	border-bottom: 1.4px solid black;
 }
 
-.space {
-	margin-bottom: 10vh;
+.hero {
+	background: #eee;
+	width: 100%;
+}
+
+.quiz-container, section {
+	margin-bottom: 8vh;
+	box-shadow: 0 0 30px rgba(0,0,0,0.30);
 }
 
 
@@ -179,6 +184,11 @@ form.quiz label {
 	}
 }
 
+form.three-class {
+	width: 80%;
+	margin: auto;
+}
+
 form.three-class div {
 	display: flex;
 	flex-direction: row;
@@ -207,13 +217,6 @@ form.three-class p {
 	flex-grow: 1;
 	color: black;
 	background: #ddd;
-}
-
-div.three-class {
-	border-radius: 20px;
-	margin: auto;
-	margin-top: 3rem;
-	width: 80%;
 }
 
 form.three-class p:hover {
@@ -279,6 +282,14 @@ form.three-class p.upper-class:hover {
 }
 
 
+.class-intro {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	border: none;
+	background: #eee;
+}
+
+
 /* Economic Capital */
 
 .quiz-container.employment-type img {
@@ -292,11 +303,14 @@ form.three-class p.upper-class:hover {
 }
 */
 
+.underemployment {
+	background: #eee;
+}
+
 #unemployment_chart {
 	min-width: 40%;
 	margin: 0;
 }
-
 
 /* Geographic Capital */
 

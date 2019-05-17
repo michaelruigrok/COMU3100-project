@@ -401,10 +401,6 @@ section.geography fieldset {
 
 /* Social Capital */
 
-.social-intro {
-	display: flex;
-}
-
 .social-intro div {
 	margin: auto;
 }
@@ -414,10 +410,15 @@ section.geography fieldset {
 	margin-left: 5%;
 }
 
+@media screen and (max-width: 800px) {
+	.social-intro p {
+		width: 90%;
+		margin: initial auto;
+	}
+}
+
 .social-circles {
 	object-position: center bottom;
-	display: flex;
-	flex-direction: column;
 }
 
 .social-circles p {

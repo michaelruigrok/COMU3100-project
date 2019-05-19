@@ -39,17 +39,20 @@
 	</head>
 	<body>
 		<header class="intro text-center section-padding" id="intro">
+        <mask>
 			<div class="background-media">
 				<video loop autoplay muted>
 					<source src="media/cultural-centre-timelapse.webm" type="video/webm"/>
 					<source src="media/cultural-centre-timelapse.mp4" type="video/mp4"/>
 				</video>
 			</div>
+          
 			<div class="overlay">
 				<h1 class="arrow">Do You Have <span class="">Class?</span></h1>
 				<p>In Australia, class is not very visible. We’re a have-a-go country where the concept of the blue-collar hard worker is idolised.</p>
 				<p>But don’t be fooled. The divisions of class are hidden, yet if you look hard enough you will find very real class structures. And these structures confine us in all sorts of ways, in all aspects of our lives.</p>
 			</div>
+        </mask>
 		</header>
 		<section class="class-intro">
 		<div class="which-class">
@@ -157,7 +160,7 @@
 			</div>
 			<div>
 			<form name="suburb-wealth" id="suburb-wealth">
-				<fieldset disabled="disabled">
+				<fieldset disabled>
 					<p>
 						<label for="suburb-wealth_1">Suburb</label>
 						<input id="suburb-wealth_1" type="text" name="suburb-wealth" minlength="3" required="required" pattern="\D*">
@@ -215,9 +218,6 @@
 		<div id="commute-time_feedback" class="hidden">
 		<section>
 			<div class="hero commute-time-map">
-				<div class="background-media">
-					<img src="img/brisbane-commute-map.png" />
-				</div>
 				<div>
 					<p>It's no secret that jobs in the CBD tend to be higher paying than those further away.</p>
 					<p>This directly lines up with the time taken to travel.</p>
@@ -262,11 +262,6 @@
 
 		<div id="shopping-centres_feedback" class="hidden">
 			<section class="resource-access">
-				<div class="background-media">
-					<img src="media/car-groceries-pov.jpg" 
-					srcset="media/car-groceries-pov.jpg 1920w"
-					srcset="media/car-groceries-pov-full.jpg 3984w"/>
-				</div>
 				<p>A wide variety of resources available to you depend on the wealth of your suburb &mdash; from food, medical care and banking, to libraries and public pools.</p>
 				<p>Quality changes a heap, too. All the grocery stores in the world mean very little if they don't stock anything. In poorer suburbs, it’s easier to buy fast food than it is to buy healthy produce.</p>
 				<p>And if you’re stuck without a car, that extra amount of distance is a big deal. Travelling on public transport with large amounts of groceries isn’t an option.</p>

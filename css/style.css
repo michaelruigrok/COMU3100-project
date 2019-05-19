@@ -129,6 +129,7 @@ svg, object {
 	}
 }
 
+.resource-access,
 .social-intro, 
 .social-circles,
 .education {
@@ -169,7 +170,7 @@ form.quiz label {
 	background: none;
 	color: white;
 	background-position: center 25%;
-	text-shadow: black 0 0 3px;
+	text-shadow: black 0 0 10px;
 	font-size: 1.2em;
 	display: flex;
 }

@@ -344,7 +344,6 @@ section.geography fieldset {
 }
 
 .commute-time-map {
-	min-height: 110vh;
 	background-position: center;
 	background-size: cover;
 	display: flex;
@@ -393,7 +392,9 @@ section.geography fieldset {
 	margin: 0;
 	width: auto;
 	padding: 2px;
+	padding-bottom: 2px !important;
 	background-color: #fab;
+	filter: brightness(70%);
 }
 
 /* Social Capital */

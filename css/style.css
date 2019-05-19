@@ -90,6 +90,11 @@ body .background-media {
 	filter: brightness(70%);
 }
 
+.background-media ~ * {
+	color: white;
+	text-shadow: black 0 0 5px;
+}
+
 .overlay {
 	margin: auto;
 }
@@ -129,20 +134,10 @@ svg, object {
 	}
 }
 
-.resource-access,
-.social-intro, 
-.social-circles,
-.education {
-	color: white;
-	text-shadow: black 0 0 5px;
-}
-
 /* Quiz */
 
 .quiz-container {
 	display: flex;
-	color: white;
-	text-shadow: black 0 0 2px;
 	font-size: 1.1em;
 }
 
@@ -171,7 +166,6 @@ mask {
 /* Introduction */
 #intro {
 	background: none;
-	color: white;
 	background-position: center 25%;
 	text-shadow: black 0 0 10px;
 	font-size: 1.2em;
@@ -180,7 +174,6 @@ mask {
 }
 
 #intro p {
-	text-shadow: black 0 0 6px;
 	width: 60%;
 }
 
@@ -367,7 +360,7 @@ section.geography fieldset {
 	width: 30%;
 	margin: auto;
 	margin-left: 2%;
-	text-shadow: rgba(255,255,255,0.7) 0 0 7px;
+	text-shadow: white 0 0 7px;
 	font-size: 1.3em;
 }
 

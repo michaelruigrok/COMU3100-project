@@ -348,7 +348,6 @@ section.geography fieldset {
 
 .commute-time-map {
 	min-height: 110vh;
-	background-image: url('../img/brisbane-commute-map.png');
 	background-position: center;
 	background-size: cover;
 	display: flex;

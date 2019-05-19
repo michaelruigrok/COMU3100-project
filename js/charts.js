@@ -18,6 +18,14 @@ function underemployment() {
 			maxValue: 30,
 			minValue: 0,
 		},
+		/*
+		chartArea: {
+			backgroundColor: {
+				fill: "#FFF",
+				opacity: 50
+			}
+		},
+		*/
 		legend: {
 			position: 'none'
 		}

@@ -207,7 +207,7 @@ mask {
 }
 
 .class-intro {
-	background-image: linear-gradient(to bottom, #345, #545454);
+	background-image: linear-gradient(to bottom, #414a51, #545454);
 }
 
 @media screen and (min-width: 800px) {

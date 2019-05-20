@@ -128,11 +128,11 @@ var SuburbWealth = (function() {
 	function decileString(decile) {
 		var pc = decile * 10;// per cent
 		if (decile === "1") {
-			return "In lowest 10% of wealth";
+			return "In lowest 10%";
 		} else if (decile === "10") {
-			return "In highest 10% of wealth";
+			return "In highest 10%";
 		} else {
-			return "Between " + (pc - 10) + "% and " + pc + "% of wealth";
+			return "Between " + (pc - 10) + "% and " + pc + "%";
 		}
 	}
 

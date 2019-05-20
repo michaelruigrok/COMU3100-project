@@ -205,6 +205,12 @@ mask {
 	}
 }
 
+@media screen and (min-width: 800px) {
+	form.which-class {
+		margin-top: 25vh;
+	}
+}
+
 form.which-class div {
 	display: flex;
 	flex-direction: row;
@@ -305,6 +311,27 @@ form.which-class p.upper-class:hover {
 
 
 /* Economic Capital */
+
+.economic-intro .background-media video, .background-media img {
+	filter: brightness(50%);
+}
+
+.economic-intro div {
+	margin: auto;
+}
+
+.economic-intro p {
+	width: 40%;
+	margin-right: 5%;
+}
+
+@media screen and (max-width: 800px) {
+	.economic-intro p {
+		width: 90%;
+		margin: initial auto;
+	}
+}
+
 
 .quiz-container.employment-type img {
 	object-position: 25%;
@@ -417,22 +444,6 @@ section.geography fieldset {
 }
 
 /* Social Capital */
-
-/* .social-intro div { */
-/* 	margin: auto; */
-/* } */
-
-/* .social-intro p { */
-/* 	width: 38%; */
-/* 	margin-left: 5%; */
-/* } */
-
-/* @media screen and (max-width: 800px) { */
-/* 	.social-intro p { */
-/* 		width: 90%; */
-/* 		margin: initial auto; */
-/* 	} */
-/* } */
 
 .social-intro, circles {
 	object-position: center bottom;

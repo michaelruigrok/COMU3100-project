@@ -26,7 +26,7 @@ function scrollToNext(jquery, options) {
 function addQListener(qName, options) {
 	document.querySelectorAll("input[name='" + qName + "']")
 		.forEach(function(input) {
-			input.addEventListener("click", function(e) {
+			input.addEventListener("change", function(e) {
 				var feedback = "#" + qName + "_feedback";
 				showHidden(feedback);
 				scrollToNext(feedback, options || {});
@@ -40,8 +40,7 @@ document.querySelectorAll("form.which-class p")
 	.forEach(e => e.addEventListener("click", function(e) {
 		var input = e.target.querySelector("input");
 		if (input) {
-			input.checked = true;
-			input.focus();
+			input.click();
 		}
 
 		showHidden("#three-class_feedback");

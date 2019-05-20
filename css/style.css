@@ -452,6 +452,14 @@ section.geography fieldset {
 
 /* Cultural Capital */
 
+.cultural-capital img {
+	object-position: left center;
+}
+
+.quiz-container.galleries .background-media * {
+	object-position: 90% center;
+}
+
 .quiz-container.shakespeare img {
 	object-position: center bottom;
 }

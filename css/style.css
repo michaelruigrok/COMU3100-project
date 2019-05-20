@@ -8,7 +8,8 @@
 body {
 	width: 100%;
 	margin: 0px;
-	background: #eee;
+	background: #2E3436;
+	color: white;
 }
 
 .arrows {
@@ -205,6 +206,10 @@ mask {
 	}
 }
 
+.class-intro {
+	background-image: linear-gradient(to bottom, #345, #545454);
+}
+
 @media screen and (min-width: 800px) {
 	form.which-class {
 		margin-top: 25vh;
@@ -237,8 +242,6 @@ form.which-class p {
 	margin: 2vmin 1vw;
 	padding: 1rem;
 	flex-grow: 1;
-	color: black;
-	background: #ddd;
 }
 
 div.which-class {
@@ -249,6 +252,7 @@ div.which-class {
 
 form.which-class p:hover {
 	background: #e7e7e7;
+	color: black;
 }
 
 form.which-class p.working-class:hover {

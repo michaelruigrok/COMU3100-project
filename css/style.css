@@ -418,36 +418,41 @@ section.geography fieldset {
 
 /* Social Capital */
 
-.social-intro div {
-	margin: auto;
-}
+/* .social-intro div { */
+/* 	margin: auto; */
+/* } */
 
-.social-intro p {
-	width: 38%;
-	margin-left: 5%;
-}
+/* .social-intro p { */
+/* 	width: 38%; */
+/* 	margin-left: 5%; */
+/* } */
 
-@media screen and (max-width: 800px) {
-	.social-intro p {
-		width: 90%;
-		margin: initial auto;
-	}
-}
+/* @media screen and (max-width: 800px) { */
+/* 	.social-intro p { */
+/* 		width: 90%; */
+/* 		margin: initial auto; */
+/* 	} */
+/* } */
 
-.social-circles {
+.social-intro, circles {
 	object-position: center bottom;
 }
 
-.social-circles p {
+.social-intro p, .social-circles p {
 	margin-top: 0px;
 }
 
-.social-circles p:first-of-type {
+.social-intro p:first-of-type, .social-circles p:first-of-type {
 	margin-top: auto;
 }
 
 .social-circles p:last-of-type {
 	margin-bottom: 3em;
+}
+
+.social-intro p:last-of-type {
+	margin-bottom: 0;
+	padding-bottom: 1em;
 }
 
 /* Cultural Capital */

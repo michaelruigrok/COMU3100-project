@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>COMU3100 Project</title>
+		<!-- jQuery, for easy access to DOM + other helper functions -->
+		<script type="text/javascript"
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous"></script>
+
+		<!-- D3, for data manipulation -->
+		<script src="https://d3js.org/d3.v5.min.js" defer="defer"></script>
+		<!-- Google Charts, for chart visualisations -->
+		<script type="text/javascript"
+				src="https://www.gstatic.com/charts/loader.js"
+				defer="defer"
+		></script>
+
+		<!-- wow.js, for animations that appear when scrolling -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+			integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U="
+			crossorigin="anonymous"></script>
+		<script>
+			new WOW().init();
+		</script>
+		<!-- animate.css, used by wow.js -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+			integrity="sha256-HtCCUh9Hkh//8U1OwcbD8epVEUdBvuI8wj1KtqMhNkI="
+			crossorigin="anonymous"/>
+
+		<!-- Our css (find our js at bottom of body) -->
+		<link rel='stylesheet' type='text/css' href='css/style.css'/>
+		<link type='text/csv' href='data/seifa-qld-2016.csv'/>
+		<link type='text/csv' href='/data/seifa-qld-2016.csv'/>
+		<script type="text/javascript" src="js/charts.js" defer="defer"></script>
+	</head>
+	<body>
+		<header class="intro text-center section-padding" id="intro">
+        <mask>
+			<div class="background-media">
+				<video loop autoplay muted>
+					<source src="media/cultural-centre-timelapse.webm" type="video/webm"/>
+					<source src="media/cultural-centre-timelapse.mp4" type="video/mp4"/>
+				</video>
+			</div>
+          
+			<div class="overlay">
+				<h1 class="arrow">Do You Have <span class="">Class?</span></h1>
+				<p>In Australia, class is not very visible. We’re a have-a-go country where the concept of the blue-collar hard worker is idolised.</p>
+				<p>But don’t be fooled. The divisions of class are hidden, yet if you look hard enough you will find very real class structures. And these structures confine us in all sorts of ways, in all aspects of our lives.</p>
+			</div>
+        </mask>
+		</header>
+		<section class="class-intro">
+		<div class="which-class">
+			<form name="three-class" class="which-class three-class" action="action">
+				<fieldset>
+					<legend>So, what class do you reckon you fit into?</legend>
+					<div class="class-options">
+						<p class="working-class">
+							<input id="three-class_working" type="radio" name="three-class">
+							<label for="three-class_working">Working Class</label>
+						</p>
+						<p class="middle-class">
+							<input id="three-class_middle" type="radio" name="three-class">
+							<label for="three-class_middle">Middle Class</label>
+						</p>
+						<p class="upper-class glint">
+							<input id="three-class_upper" type="radio" name="three-class">
+							<label for="three-class_upper">Upper Class</label>
+						</p>
+					</div>
+					<div class="other-options">
+						<p>
+							<input id="three-class_none" type="radio" name="three-class">
+							<label for="three-class_none">I don't think Australia has class.</label>
+						</p>
+						<p>
+							<input id="three-class_idk" type="radio" name="three-class">
+							<label for="three-class_idk">I don't know</label>
+						</p>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div id="three-class_feedback" class="hidden">
+			<div class="space">
+			<p>
+				Class seems pretty straightforward. But, there's <strong>a lot going on under the surface</strong> that affects us directly. It might make you think very differently from your initial answer.
+			</p>
+			<p>For instance, the <strong>kind of job you have</strong> is probably the first thing you thought of.</p>
+			<p>And yes, it has a massive effect on your financial status. But it’s more than jobs that pay a little, and jobs that pay a lot.</p>
+			<p>It’s also about <strong>how much your job guarantees you’ll earn enough</strong> to make a living.</p>
+			</div>
+
+			<div class="quiz-container employment-type">
+				<div class="background-media">
+					<img src="media/close-conveyor-belt-machine.jpg"/>
+				</div>
+				<form name="employment-type" class="quiz employment-type" action="action">
+					<fieldset>
+						<legend>How much do your work hours vary on a weekly basis?</legend>
+						<p>
+							<input id="employment-type_1" type="radio" name="employment-type">
+							<label for="employment-type_1">30+ hours</label>
+						</p>
+						<p>
+							<input id="employment-type_2" type="radio" name="employment-type">
+							<label for="employment-type_2">15-30 hours</label>
+						</p>
+						<p>
+							<input id="employment-type_3" type="radio" name="employment-type">
+							<label for="employment-type_3">5-15 hours</label>
+						</p>
+						<p>
+							<input id="employment-type_4" type="radio" name="employment-type">
+							<label for="employment-type_4">1-5 hours</label>
+						</p>
+						<p>
+							<input id="employment-type_5" type="radio" name="employment-type">
+							<label for="employment-type_5">No fluctuation</label>
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		</section>
+
+		<div id="employment-type_feedback" class="hidden">
+		<section class="underemployment sidebyside">
+			<div>
+				<p>In the case of part time jobs, contract work, and self-employment, <strong>the amount of work you can complete varies wildly</strong>. And putting extra effort into getting enough hours of work in each week means extra stress.</p>
+				<p>This is <strong>underemployment</strong>, it's a big issue that isn't talked about. The number of people who are underemployed is <strong>almost as large</strong> as those who are unemployed.
+				</p>
+				<p>
+					<strong>Class isn't just a job-by-job thing either</strong>. Those of parents with high-prestige jobs will usually earn more, even for the exact same job.
+				</p>
+				<p>
+					And technical knowledge, how suited your role is to management tasks, the transferability of your skills, and how easily your job can be automated all impact your prospects of securing a living wage.
+				</p>
+			</div>
+			<div id="unemployment_chart"></div>
+		</section>
+
+		<section class="geography">
+			<div>
+				<p>So class is more than job distinctions or salary. But this is <strong>just the tip of the iceberg.</strong></p>
+		<p>Naturally, wealth determines what housing you can buy, and in turn where
+			you can live. But, <strong>wealth is becoming more and more geographically
+			isolated.</strong></p>
+		<p>We can measure this by the number of suburbs where the average person is
+			in the bottom 10% in terms of wealth. The closer to the edges of
+			disadvantage a suburb is, the more people fall under this threshold. In
+			the 5 years <strong>from 2006 to 2011</strong>, the number of deeply poor suburbs <strong>rose by
+		42%</strong>.</p>
+		<p>This geographic divide has the most visible effect on your daily life.</p>
+			</div>
+			<div>
+			<form name="suburb-wealth" id="suburb-wealth">
+				<fieldset disabled>
+					<p>
+						<label for="suburb-wealth_1">Suburb</label>
+						<input id="suburb-wealth_1" type="text" name="suburb-wealth" minlength="3" required="required" pattern="\D*">
+					</p>
+					<button type="submit">Go</button>
+				</fieldset>
+			</form>
+			<table id="suburb-wealth-results">
+				<thead>
+					<tr>
+						<th>Suburb</th>
+						<th>Average Person's Wealth</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			</div>
+		</section>
+
+		<div class="quiz-container commute-time">
+			<div class="background-media">
+				<video loop autoplay muted>
+					
+					<source src="media/traffic-and-river.mp4" type="video/mp4"/>
+				</video>
+			</div>
+			<form name="commute-time" class="quiz number-commute-time" action="action">
+				<fieldset>
+					<legend>How long does it take to get to work each day?</legend>
+					<p>
+						<input id="commute-time_1" type="radio" name="commute-time">
+						<label for="commute-time_1">Less than 15 minutes</label>
+					</p>
+					<p>
+						<input id="commute-time_2" type="radio" name="commute-time">
+						<label for="commute-time_2">15-30 minutes</label>
+					</p>
+					<p>
+						<input id="commute-time_3" type="radio" name="commute-time">
+						<label for="commute-time_3">30 minutes to an hour</label>
+					</p>
+					<p>
+						<input id="commute-time_4" type="radio" name="commute-time">
+						<label for="commute-time_4">1-2 hours</label>
+					</p>
+					<p>
+						<input id="commute-time_5" type="radio" name="commute-time">
+						<label for="commute-time_5">2+ hours</label>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+		</div>
+		<div id="commute-time_feedback" class="hidden">
+		<section>
+			<div class="hero commute-time-map">
+				<div class="background-media">
+					<img src="img/brisbane-commute-map.png" />
+				</div>
+				<div>
+					<p>It's no secret that jobs in the CBD tend to be higher paying than those further away.</p>
+					<p>This directly lines up with the time taken to travel.</p>
+					<p>In general, the less money you earn, the farther you have to commute.</p>
+					<img class="commute-map-legend" alt="A map showing commute distance based on place of work. Those who work in the centre of the city average 5 to 10km, those who work in the suburbs average 10 to 15km, and those on the outskirts travel over 40km+." src="https://www.ausstats.abs.gov.au/ausstats/templates.nsf/Pages/Commuting_2016_Maps/$File/Average_Commuting_Distance_Map_Legend.png"/>
+				</div>
+			</div>
+			<p class="commute-map-copyright">Commute map courtesy Australian Bureau of Statistics | Esri, HERE, Garmin, USGS, NGA | ABS</p>
+		</section>
+
+
+		<div class="quiz-container shopping-centres">
+			<div class="background-media">
+				<video loop autoplay muted>
+					<source src="media/shopping-carpark-low.webm" type="video/webm"/>
+					<source src="media/shopping-carpark-low.mp4" type="video/mp4"/>
+				</video>
+			</div>
+			<form name="shopping-centres" class="quiz shopping-centres" action="action">
+				<fieldset>
+					<legend>How many shopping centres are available in a 10 minute drive?</legend>
+					<p>
+						<input id="shopping-centres_1" type="radio" name="shopping-centres">
+						<label for="shopping-centres_1">None</label>
+					</p>
+					<p>
+						<input id="shopping-centres_2" type="radio" name="shopping-centres">
+						<label for="shopping-centres_2">1-3</label>
+					</p>
+					<p>
+						<input id="shopping-centres_3" type="radio" name="shopping-centres">
+						<label for="shopping-centres_3">4-10</label>
+					</p>
+					<p>
+						<input id="shopping-centres_4" type="radio" name="shopping-centres">
+						<label for="shopping-centres_4">10+</label>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+		</div>
+
+		<div id="shopping-centres_feedback" class="hidden">
+			<section class="resource-access">
+
+				<div class="background-media">
+					<picture>
+						<source srcset="media/car-groceries-pov-high-full.jpg" media="(min-width: 2000px)"/>
+							<source srcset="media/car-groceries-angle-mobile.jpg" media="(orientation: portrait)"/>
+							<source srcset="media/car-groceries-pov-high.jpg"/>
+							<img src="media/car-groceries-pov-high.jpg"/>
+					</picture>
+				</div>
+				<p>A wide variety of resources available to you depend on the wealth of your suburb &mdash; from food, medical care and banking, to libraries and public pools.</p>
+				<p>Quality changes a heap, too. All the grocery stores in the world mean very little if they don't stock anything. In poorer suburbs, it’s easier to buy fast food than it is to buy healthy produce.</p>
+				<p>And if you’re stuck without a car, that extra amount of distance is a big deal. Travelling on public transport with large amounts of groceries isn’t an option.</p>
+			</section>
+
+			<section class="social-intro">
+				<div class="background-media">
+					<img src="media/organic-food.jpg"/>
+				</div>
+				<div>
+					<p>Another thing that where you live influences is your community.</p>
+					<p>You’ve probably heard ‘It’s not what you know, it’s who you know’, but this distinction commonly sits along class lines.</p>
+					<p>If you think about the way that we make friends, it starts to make sense. You make friends with the people you grew up with, the places that you live, who you work with, and those who can afford similar interests.</p>
+				</div>
+			</section>
+
+			<div class="quiz-container close-friends-class">
+				<div class="background-media">
+					<picture>
+						<source srcset="media/darra-house-large.jpg" media="(min-width: 1921px)"/>
+						<source srcset="media/darra-house.jpg"/>
+						<img 
+							srcset="media/darra-house-large.jpg 3471w"
+							src="media/darra-house.jpg" 
+							 />
+					</picture>
+				</div>
+				<form name="close-friends-class" class="quiz close-friends-class" action="action">
+					<fieldset>
+						<legend>How many of your close friends and family work in similar jobs to you?</legend>
+						<p>
+							<input id="close-friends-class_1" type="radio" name="close-friends-class">
+							<label for="close-friends-class_1">Very few</label>
+						</p>
+						<p>
+							<input id="close-friends-class_2" type="radio" name="close-friends-class">
+							<label for="close-friends-class_2">20-40%</label>
+						</p>
+						<p>
+							<input id="close-friends-class_3" type="radio" name="close-friends-class">
+							<label for="close-friends-class_3">About half</label>
+						</p>
+						<p>
+							<input id="close-friends-class_4" type="radio" name="close-friends-class">
+							<label for="close-friends-class_4">60-80%</label>
+						</p>
+						<p>
+							<input id="close-friends-class_4" type="radio" name="close-friends-class">
+							<label for="close-friends-class_4">Most, if not all.</label>
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div id="close-friends-class_feedback" class="hidden">
+			<section class="social-circles">
+				<div class="background-media">
+					<img src="media/Suncorp-back-under-tree.jpg"/>
+				</div>
+				<p>This is called <strong>Social Capital</strong>, and it’s an important factor that social scientists take into account when considering class.</p>
+				<p>Different groups you interact with might sit differently in terms of
+					class. You might be the first in your family to attend university,
+					family and work gatherings might be very different. You might talk
+				about the last State of Origin match with both friends and family, but
+				only talk about the stock market with your work mates.</p>
+				<p>The longer you live within the behaviour, language and social expectations of your social groups, the harder it might be to change them.</p>
+			</section>
+
+			<div class="quiz-container social-groups">
+				<div class="background-media">
+					<img src="media/tennis-court-net-close.jpg"/>
+				</div>
+				<form name="social-groups" class="quiz social-groups" action="action">
+					<fieldset>
+						<legend>Which of your social groups has the highest class standing?</legend>
+						<p>
+							<input id="social-groups_1" type="radio" name="social-groups">
+							<label for="social-groups_1">Family</label>
+
+						</p>
+						<p>
+							<input id="social-groups_2" type="radio" name="social-groups">
+							<label for="social-groups_2">Childhood/School friends</label>
+						</p>
+						<p>
+							<input id="social-groups_3" type="radio" name="social-groups">
+							<label for="social-groups_3">Work colleagues</label>
+						</p>
+						<p>
+							<input id="social-groups_4" type="radio" name="social-groups">
+							<label for="social-groups_4">Fellow hobbyists/club members</label>
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+				<div class="background-media">
+					<img src="media/brand-new-bookshop.jpg"/>
+				</div>
+		<div id="social-groups_feedback" class="hidden">
+			<section class="cultural-capital">
+				<p>Class shapes the people you regularly interact with, which in turn shapes your interests.</p>
+
+				<p>The class you fit into also has a big role on your media tastes - the classic <strong>low brow&ndash;high brow divide</strong>.</p>
+
+				<p>These sorts of class differences are <strong>cultural capital.</strong></p>
+
+			</section>
+
+			<div class="quiz-container galleries">
+				<div class="background-media">
+					<video loop autoplay muted>
+					
+						<source src="media/art-gallery.mp4" type="video/mp4"/>
+					</video> 
+                </div>
+				<form name="galleries" class="quiz galleries" action="action">
+					<fieldset>
+						<legend>When was the last time you went to a museum or art gallery?</legend>
+						<p>
+							<input id="galleries_1" type="radio" name="galleries">
+							<label for="galleries_1">In the last month</label>
+						</p>
+						<p>
+							<input id="galleries_2" type="radio" name="galleries">
+							<label for="galleries_2">In the last few months</label>
+						</p>
+						<p>
+							<input id="galleries_3" type="radio" name="galleries">
+							<label for="galleries_3">This year</label>
+						</p>
+						<p>
+							<input id="galleries_4" type="radio" name="galleries">
+							<label for="galleries_4">A couple of years ago</label>
+						</p>
+						<p>
+							<input id="galleries_5" type="radio" name="galleries">
+							<label for="galleries_5">Never</label>
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div id="galleries_feedback" class="hidden">
+			<section class="diverse-tastes">
+				<p>But It’s not that low-brow and high-brow media are split between lower and upper classes.</p>
+				<p>If you’re higher class you might still watch the latest Bachelorette, but you might swear you only watch it ‘ironically’.</p>
+				<p>And the upper class tend to be better followers of new, upcoming and trending acts.</p>
+				<p>Instead, ‘low-brow’ content is consumed by everyone, but high-brow media are usually restricted to higher class audiences.</p>
+			</section>
+
+			<div class="quiz-container books">
+				<div class="background-media">
+					<img src="media/council-libary-shelves.jpg"/>
+				</div>
+				<form name="books" class="quiz books" action="action">
+					<fieldset>
+						<legend>How many books do you read each month?</legend>
+						<p>
+							<input id="books_1" type="radio" name="books">
+							<label for="books_1">Less than 1 a month</label>
+						</p>
+						<p>
+							<input id="books_2" type="radio" name="books">
+							<label for="books_2">1-3</label>
+						</p>
+						<p>
+							<input id="books_3" type="radio" name="books">
+							<label for="books_3">4-7</label>
+						</p>
+						<p>
+							<input id="books_4" type="radio" name="books">
+							<label for="books_4">8+</label>
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div id="books_feedback" class="hidden">
+			<section class="critical-consumption">
+				<p>The real difference between what media you consume is the <strong>way you consume it.</strong></p>
+				<p>Those in higher classes are more likely to break down and analyse what they watch, and get enjoyment from doing it. This means they are more likely to consume media to expand their horizons, and as part of lifelong learning.</p>
+				<p>The skills of critical consumption that those with higher cultural capital build up continue to help them get further in life. This isn’t an innate, natural difference between the lower and higher classes - it’s as constructed as any other part of class is.</p>
+				<p>It's a feedback loop that starts as soon as you are born.</p>
+			</section>
+
+			<div class="quiz-container shakespeare">
+				<div class="background-media">
+					<img src="media/clean-classroom.jpg"/>
+				</div>
+				<form name="shakespeare" class="quiz shakespeare" action="action">
+					<fieldset>
+						<legend>Did you read or watch a Shakespeare play before high school?</legend>
+						<p>
+							<input id="shakespeare_1" type="radio" name="shakespeare">
+							<label for="shakespeare_1">Yes</label>
+						</p>
+						<p>
+							<input id="shakespeare_2" type="radio" name="shakespeare">
+							<label for="shakespeare_2">No</label>
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div id="shakespeare_feedback" class="hidden">
+			<section class="education">
+				<div class="background-media">
+					<img src="media/uq-front.jpg"/>
+				</div>
+				<p>At this point, your cultural capital is <strong>absolutely crucial</strong>. If you’ve had practice watching media in a critical way before school, you’re going to do better.</p>
+				<p>And better grades means you’re more likely to finish highschool, and get into uni.</p>
+				<p>Going to uni is a big deal nowadays. Credential Creep means a race to the top for job requirements - what used to need highschool or a diploma now require much more.</p>
+			</section>
+
+			<section class="six-class-intro">
+				<p>So how do we decide what our class is when considering so many aspects of our lives?</p>
+				<p>The categories are completely made up, so it’s up to us to decide what best fits the Australian circumstance. But there’s always going to be trade offs.</p>
+				<p>Jill Sheppard and Nick Biddle came up with six classes. Each of these categories are distinct in each way we’ve talked about today - career, wealth, where they live, who they’re mates with, and what entertainment they like.</p>
+				<dl>
+					<dt>The Precariat</dt><dd>The group doing it toughest.</dd>
+					<dt>Ageing Workers</dt><dd>A traditional working class, the majority of which are pensioners.</dd>
+					<dt>New Workers</dt><dd>A younger group with more opportunities, better education, good superannuation, and usually working full time.</dd>
+					<dt>Established Middle</dt><dd>Have enough savings to be relativelly stable month-to-month.</dd>
+					<dt>Emerging Affluent</dt><dd>The youngest overall group, with big dreams and high wages - But usually with less savings and more spending than the established middle.</dd>
+					<dt>Established Affluent</dt><dd>Will always have enough wealth to live comfortably</dd>
+				</dl>
+				<p>This system gives a finer-grain approach to answer questions of where people sit in the class system.</p>
+			</section>
+			<section>
+			<div class="which-class six-class">
+			<form name="six-class" class="which-class six-class" action="action">
+				<fieldset>
+					<legend>So, considering everything we’ve just talked about, and these six classes, Which class do you think you fit into?</legend>
+					<div>
+						<p class="working-class">
+							<input id="six-class_precariat" type="radio" name="six-class">
+							<label for="six-class_precariat">Precariat</label>
+						</p>
+						<p class="working-class">
+							<input id="six-class_ageing" type="radio" name="six-class">
+							<label for="six-class_ageing">Ageing Workers</label>
+						</p>
+						<p>
+							<input id="six-class_new" type="radio" name="six-class">
+							<label for="six-class_new">New Workers</label>
+						</p>
+						</div>
+						<div>
+						<p class="middle-class">
+							<input id="six-class_middle" type="radio" name="six-class">
+							<label for="six-class_middle">Established Middle</label>
+						</p>
+						<p class="middle-class">
+							<input id="six-class_emerging-affluent" type="radio" name="six-class">
+							<label for="six-class_emerging-affluent">Emerging Affluent</label>
+						</p>
+						<p class="upper-class">
+							<input id="six-class_esblished-affluent" type="radio" name="six-class">
+							<label for="six-class_esblished-affluent">Established Affluent</label>
+						</p>
+						</div>
+				</fieldset>
+			</form>
+		</div>
+		<div id="six-class_feedback" class="hidden">
+			<p>Thanks for Reading!</p>
+			<!-- <p>You can look at the following resources for more information.</p> -->
+		</div>
+		</section>
+		<script type="text/javascript"
+			src="js/main.js"
+			></script>
+	</body>
+</html>
+
